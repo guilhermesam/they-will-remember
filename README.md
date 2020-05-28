@@ -37,6 +37,11 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Python](#python)
     - [Pandas](#pandas)
     - [NumPy](#numpy)
+- [Machine Learning](#machine-learning)
+- [Deep Learning](#deep-learning)
+	- [Redes Neurais](#redes-neurais)
+	- [Funções de Ativação](#funções-de-ativação)
+		- [Função de Etapa Binária (Binary Step Function)](função-de-etapa-binária(binary-step-function))
 
 ## Python
 - ### Estruturas
@@ -140,13 +145,13 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 					f(x) = 1, x >= 0
 					f(x) = 0, x < 0
 
-	-## Função Linear:
+	- ## Função Linear:
   		- A derivada de uma função linear é constante, ou seja, não depende do valor de entrada x. Por isso, toda vez que efetuamos o backpropagation, o gradiente é o mesmo.
 		- A função linear é definida como:
 			
 					f(x) = ax
 
-	-## Sigmóide:
+	- ## Sigmóide:
   		- A maior vantagem desta função linear é justamente o fato de que ela não é linear.
   		- A função essencialmente empurra os valores de Y para os extremos, sendo um atributo interessante quando se deseja classificar os valores dentro de uma classe específica.
   		- A função é problemática quando os valores do gradiente são muito próximos a zero, pois assim, a rede não está realmente aprendendo.
@@ -154,28 +159,20 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		
 					f(x) = 1 / (1 + e ^ -x)
   
- 	-## Tanh:
+ 	- ## Tanh:
   		- Basicamente, soluciona o nosso problema dos valores, sendo todos do mesmo sinal. Todas as outras propriedades são as mesmas da função sigmoide. É contínuo e diferenciável em todos os pontos. A função não é linear, então podemos fazer o backpropagation facilmente nos erros.
 		- A função tanh é uma versão escalonada da sigmóide, sendo descrita como:
 			
 					tanh(x) = 2 / (1 + e ^ (- 2x)) -1
 
-	-## ReLU:
+	- ## ReLU:
   		- É a função de ativação mais utilizada atualmente na construção de redes neurais.
   		- Uma de suas vantagens é que ela não ativa todos os neurônios da rede simultâneamente, tornando a rede esparsa, eficiente e fácil para a computação.
 		- Significa Unidade Linear Rectificada e pode ser descrita como:
 	
 					f(x) = max (0, x) 
 
-	-## Leaky ReLU:
+	- ## Leaky ReLU:
   		- A função Leaky ReLU não passa de uma versão melhorada da função ReLU. Na função ReLU, o gradiente é 0 para x < 0, o que fez os neurônios morrerem por ativações nessa região. Leaky ReLU ajuda a resolver este problema. Em vez de definir a função Relu como 0 para x inferior a 0, definimos como um pequeno componente linear de x. Pode ser definido como:
 
 					f(x) = ax, x < 0f(x) = x, x > = 0
-
-O que fizemos aqui é que simplesmente substituímos a linha horizontal por uma linha não-zero, não horizontal. Aqui um é um valor pequeno como 0,01 ou algo parecido. A principal vantagem de substituir a linha horizontal é remover o gradiente zero.
-	- Funções Sigmóide e suas combinações geralmente funcionam melhor no caso de classificadores.
-	- Funções Sigmóide e Tanh às vezes são evitadas devido ao problema de Vanishing Gradient (que estudaremos no capítulo sobre redes neurais recorrentes).
-	- A função ReLU é uma função de ativação geral e é usada na maioria dos casos atualmente.
-	- Se encontrarmos um caso de neurônios deficientes em nossas redes, a função Leaky ReLU é a melhor escolha.
-	- Tenha sempre em mente que a função ReLU deve ser usada apenas nas camadas ocultas.
-	- Como regra geral, você pode começar usando a função ReLU e depois passar para outras funções de ativação no caso da ReLU não fornecer resultados ótimos.
