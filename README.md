@@ -133,7 +133,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 
 
-	-## Função de Etapa Binária (Binary Step Function):
+	- ## Função de Etapa Binária (Binary Step Function):
 		- Funções binárias possuem gradiente da derivada = 0, ou seja, são incapazes de se aperfeiçoar através da correção do erro.
 		- Classificador simples baseado em decisões binárias (sim ou não), seguindo a regra:
 	
