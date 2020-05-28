@@ -1,6 +1,6 @@
 # They Will Remember You!
 
-Planejamento de estudos, com prazo de validade no final do tempo de graduação. O que virá após isso, desejo muito saber. Esta ideia foi inspirada no repositório de @jwashan.
+Planejamento de estudos, com prazo de validade no final do tempo de graduação. O que virá após isso, desejo muito saber. Esta ideia foi inspirada no repositório de [@jwashan](https://github.com/jwasham/coding-interview-university)!
 
 ![Warriors](https://www.tec.com.pe/wp-content/uploads/2014/09/LoL-Imagine-Dragons-Warrior-2.jpg)
 
@@ -18,3 +18,5 @@ Este repositório surgiu da necessidade mental de um cronograma bem definido ace
 - No geral, este repositório contará com um index, que listará todos os conteúdos citados acima, desfragmentando-os em tópicos de estudo menores. Junto com o conteúdo, comumente estarão dispostos links que levam ao lugar de onde eu obtive tal conhecimento do assunto. Ao final, existe uma seção de links úteis, onde estarão dispostos links que apontam para conteúdos miscelâneos, como playlists com músicas para relaxar, artigos sobre assuntos variados, etc.
 
 ## Índice
+- [O que é isso](#o-que-é-isso)
+- [Organização](#organização)
