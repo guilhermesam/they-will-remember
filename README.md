@@ -185,19 +185,19 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 					f(x) = ax, x < 0f(x) = x, x > = 0
 
 ## Apostilas e Documentações
-- [Apostila de HTML (en-us)](https://www.w3schools.com/html/)!
-- [Lista de pacotes e arquivos de classe LaTeX](https://pt.overleaf.com/learn/latex/List_of_packages_and_class_files)!
+- [Apostila de HTML (en-us)](https://www.w3schools.com/html/)
+- [Lista de pacotes e arquivos de classe LaTeX](https://pt.overleaf.com/learn/latex/List_of_packages_and_class_files)
 
 ## Cursos
-- [Curso de Data Science com Python](https://www.datascienceacademy.com.br/path-player?courseid=python-fundamentos&unit=56fa01d947d7ddf1938b456cUnit)!
+- [Curso de Data Science com Python](https://www.datascienceacademy.com.br/path-player?courseid=python-fundamentos&unit=56fa01d947d7ddf1938b456cUnit)
 - [Curso de Flutter e Dart](https://www.youtube.com/playlist?list=PL5EmR7zuTn_aX0pG4oWTyKKQT25Hkq2XG)
 - [Curso de JavaScript](https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
-- [Curso de Kotlin](https://www.youtube.com/playlist?list=PLxWMYNrPoLoJ6RjjUdpIPm6NE5CiRPG6E)!
-- [Curso de PHP](https://www.youtube.com/playlist?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k)!
-- [Curso de RPG Maker MV](https://www.youtube.com/playlist?list=PLfpzoTMgIjznBx77qsr05Re4-UclPC7kS)!
-- [Curso de Ruby e Ruby on Rails](https://jornadadodev.com.br/posts/ruby)!
-- [Curso de Unity Engine](https://www.youtube.com/playlist?list=PLOFacakspTDKh8wMqF-2soctnLr7i_NEc)!
+- [Curso de Kotlin](https://www.youtube.com/playlist?list=PLxWMYNrPoLoJ6RjjUdpIPm6NE5CiRPG6E)
+- [Curso de PHP](https://www.youtube.com/playlist?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k)
+- [Curso de RPG Maker MV](https://www.youtube.com/playlist?list=PLfpzoTMgIjznBx77qsr05Re4-UclPC7kS)
+- [Curso de Ruby e Ruby on Rails](https://jornadadodev.com.br/posts/ruby)
+- [Curso de Unity Engine](https://www.youtube.com/playlist?list=PLOFacakspTDKh8wMqF-2soctnLr7i_NEc)
 
 ## Links Úteis
-- [Sons de chuva](https://www.youtube.com/watch?v=8plwv25NYRo)!
-- [Minha playlist de OSTs de Naruto para fins motivacionais](https://www.youtube.com/playlist?list=PL5cKPIIsKxtPHiEpvvWM0A4O6agfqK4cq)!
+- [Sons de chuva](https://www.youtube.com/watch?v=8plwv25NYRo)
+- [Minha playlist de OSTs de Naruto para fins motivacionais](https://www.youtube.com/playlist?list=PL5cKPIIsKxtPHiEpvvWM0A4O6agfqK4cq)
