@@ -12,6 +12,11 @@ Este repositório surgiu da necessidade mental de um cronograma bem definido ace
 - Conhecimentos formais em linguagens de programação back-end, como Python, Java e JavaScript (node.js), além de seus principais frameworks e paradigmas.
 - Conhecimentos formais em modelagem de estruturas de sistemas de software, primariamente utlizando da notação da UML;
 - Conhecimentos sólidos sobre paradigmas de programação, utilizando a linguagem Haskell como exemplo do paradigma funcional e da linguagem Prolog como exemplo do paradigma lógico.
+- É importante destacar que o planejamento descrito nesse repositório está sujeito a alterações a qualquer momento.
+
+## O plano diário
+
+O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além disso, não ultrapassar 8 horas diárias, para não sobrecarregar a mente. Também regular com horários de lazer, visando reservar um tempo para processar o conhecimento obtido e descansar a mente. Não estabelecerei um cronograma reservando dias específicos para determinado conteúdo, assim, deixando o espaço flexível para conteúdos à medida que sentir vontade ou necessidade de um aprofundamento maior sobre determinado conteúdo.
 
 ## Organização
 
@@ -19,4 +24,12 @@ Este repositório surgiu da necessidade mental de um cronograma bem definido ace
 
 ## Índice
 - [O que é isso](#o-que-é-isso)
+- [O plano diário](#o-plano-diário)
 - [Organização](#organização)
+- [Python](#python)
+    - [Pandas](#pandas)
+    - [NumPy](#numpy)
+
+## Python
+- ### Pandas
+- ### NumPy
