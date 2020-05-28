@@ -87,3 +87,18 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
       
 - ### NumPy
 - ### Web Scraping
+
+## Machine Learning
+## Deep Learning
+- ## Perceptron
+    - O que caracteriza um modelo de aprendizagem profunda são redes neurais artificiais com múltiplas camadas ocultas (ou intermediárias).
+
+    - O Perceptron é a arquitetura de redes neurais artificiais mais simples que existe, desenvolvido nas décadas de 50 e 60.
+
+    - O Perceptron é um modelo matemático que recebe várias entradas (x1,x2, ...xn) e produz uma única saída binária.
+
+			x1,x2,x3 -----> O -----> output
+
+    - Para cada uma das entradas, o modelo introduz pesos (w1, w2, ...wn), que são números reais que expressam a importância das respectivas entradas para a saída. A saída do neurônio, 0 ou 1, true ou false, é determinada pela soma ponderada, Σjwjxj, menor ou maior que algum limiar (threshold).
+
+    - Perceptron é uma rede neural de camada única e um Perceptron de várias camadas é chamado de Rede Neural Artificial. O Perceptron é um classificador linear (binário). Além disso, é usado na aprendizagem supervisionada e pode ser usado para classificar os dados de entrada fornecidos.
