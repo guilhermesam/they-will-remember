@@ -47,7 +47,12 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Funções lambda
 - ### List Comprehension
 - ### Pandas
-    - Possui duas classes principais: Series (unidimensional) e DataFrame (pluridimensional).
+    - Veja a [documentação](https://pandas.pydata.org/docs/)
+    
+    - Possui duas classes principais: Series, formada por uma coluna e várias linhas, e DataFrame (conjunto de Series), formado por linhas e colunas.
+    
+    - Criando uma Series:
+        serie = pd.Series([1,2,3,4])
     
     - Criando um DataFrame de uma dimensão:
         dataframe = pd.DataFrame([1,2,3,4])
@@ -62,11 +67,23 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
         - [ ] dataframe.columns: retorna o nome das colunas do dataframe.
         - [ ] dataframe.values: retorna todas as linhas presentes no dataframe.
         - [ ] dataframe.dtype: retorna o tipo de objeto que cada coluna do dataframe armazena.
+        - [ ] dataframe.shape: quantidade de linhas e colunas do DataFrame.
         
     - Principais métodos do DataFrame:
         - [ ] dataframe.head(): retorna um resumo com o número de linhas passado como parâmetro (5 por default).
         - [ ] dataframe.describe(): retorna um resumo estatístico dos dados.
-        
+        - [ ] dataframe.loc[]: verificação por nome do índice.
+        - [ ] dataframe.iloc[]: verificação por posição no índice.
+        - [ ] dataframe.mean(): verifica a média dos valores de cada coluna.
+        - [ ] dataframe.apply(): aplica um método para cada item do dataframe.
+        - [ ] dataframe.drop(): remove a coluna passada como parâmetro.
+        - [ ] dataframe.count(): contagem de dados não-nulos.
+        - [ ] dataframe.sort_values(): ordenando em ordem crescente.
+        - [ ] dataframe.sort_values(ascending=False): ordenando em ordem decrescente.
+        - [ ] dataframe[dataframe['columns'] #condição lógica]: retorna os dados seguindo alguma condição lógica.
+        - [ ] dataframe.dropna(): retorna as linhas que não contém um NaN.
+        - [ ] dataframe.fillna(): preenche todos os valores NaN por um outro específico.
+        - [ ] dataframe.isna(): indica quais valores do dataframe são NaN.
       
 - ### NumPy
 - ### Web Scraping
