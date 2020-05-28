@@ -97,8 +97,89 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
     - O Perceptron é um modelo matemático que recebe várias entradas (x1,x2, ...xn) e produz uma única saída binária.
 
-			x1,x2,x3 -----> O -----> output
+					x1,x2,x3 -----> O -----> output
 
     - Para cada uma das entradas, o modelo introduz pesos (w1, w2, ...wn), que são números reais que expressam a importância das respectivas entradas para a saída. A saída do neurônio, 0 ou 1, true ou false, é determinada pela soma ponderada, Σjwjxj, menor ou maior que algum limiar (threshold).
 
     - Perceptron é uma rede neural de camada única e um Perceptron de várias camadas é chamado de Rede Neural Artificial. O Perceptron é um classificador linear (binário). Além disso, é usado na aprendizagem supervisionada e pode ser usado para classificar os dados de entrada fornecidos.
+
+- ## Redes Neurais
+	
+	- Reprodução do comportamento do cérebro humano de forma computacional;
+	- O cérebro aprende no reconhecimento de padrões com base na experiência;
+    	- Redes Neurais Artificiais Profundas constituem o conceito de Deep Learning;
+    	- Redes neurais artificiais possuem a capacidade de recriar sinapses do cérebro;
+    	- Uma RNA modela a relação entre um conjunto de sinais de entrada e um sinal de saída usando um modelo derivado de nossa compreensão de como um cérebro biológico responde a estímulos de entradas sensoriais.
+    	- Devido ao número enorme de neurônios artificiais necessários, entra a importância da computação paralela em GPU.
+    - Deep Learning surgiu pelo fato de que é difícil de definir formalmente um problema casual ou comum no dia a dia, como visão ou audição de algo.
+
+- ## Funções de Ativação
+
+	- Os neurônios fazem uma transformação linear na entrada pelos pesos e bias (viés), enquanto a transformação não-linear é feita pela função de ativação.
+
+- O movimento da informação "da esquerda para a direita" e único é chamado de propagação direta. Caso o resultado gerado seja incompatível com o esperado, atualizamos o bias e os pesos, no processo chamado de backpropagation.
+
+- Uma pequena mudança no peso ou no bias causam uma pequena mudança no output.
+
+- Em sistemas Perceptron, uma mudança pequena nos pesos ou no bias podem causar uma mudança inesperada e difícil de controlar, podendo mudar o resultado completamente de 0 para 1. Nesse cenário, entram as funções de ativação.
+
+- Funções de ativação verificam se a informação que o neurônio está recebendo é pertinente ou não para a tomada de decisão.
+
+
+
+		Y = Activation(Σ(weight * input) + bias)
+
+
+
+- Função de ativação é a transformação não linear que fazemos ao longo do sinal de entrada.
+
+- Sem a função de ativação, um modelo de rede neural é basicamente um algoritmo de regressão linear, se tornando incapaz de adaptar-se de forma não-linear e assim, incapaz de realizar tarefas complexas como processamento de linguagem natural ou classificação de imagens.
+
+
+	Principais tipos de função de ativação
+
+* Função de Etapa Binária (Binary Step Function):
+  - Classificador simples baseado em decisões binárias (sim ou não), seguindo a regra:
+	f(x) = 1, x >= 0
+	f(x) = 0, x < 0
+  - Funções binárias possuem gradiente da derivada = 0, ou seja, são incapazes de se aperfeiçoar através da correção do erro.
+
+* Função Linear:
+  - A função linear é definida como:
+	f(x) = ax
+  - A derivada de uma função linear é constante, ou seja, não depende do valor de entrada x. Por isso, toda vez que efetuamos o backpropagation, o gradiente é o mesmo.
+
+* Sigmóide:
+  - A função signóide é definida como:
+	f(x) = 1 / (1 + e ^ -x)
+  - A maior vantagem desta função linear é justamente o fato de que ela não é linear.
+  - A função essencialmente empurra os valores de Y para os extremos, sendo um atributo interessante quando se deseja classificar os valores dentro de uma classe específica.
+  - A função é problemática quando os valores do gradiente são muito próximos a zero, pois assim, a rede não está realmente aprendendo.
+  
+* Tanh:
+  - A função tanh é uma versão escalonada da sigmóide, sendo descrita como:
+	tanh(x) = 2 / (1 + e ^ (- 2x)) -1
+  - Basicamente, soluciona o nosso problema dos valores, sendo todos do mesmo sinal. Todas as outras propriedades são as mesmas da função sigmoide. É contínuo e diferenciável em todos os pontos. A função não é linear, então podemos fazer o backpropagation facilmente nos erros.
+
+* ReLU:
+  - Significa Unidade Linear Rectificada e pode ser descrita como:
+	f(x) = max (0, x) 
+  - É a função de ativação mais utilizada atualmente na construção de redes neurais.
+  - Uma de suas vantagens é que ela não ativa todos os neurônios da rede simultâneamente, tornando a rede esparsa, eficiente e fácil para a computação.
+
+* Leaky ReLU:
+  - A função Leaky ReLU não passa de uma versão melhorada da função ReLU. Na função ReLU, o gradiente é 0 para x < 0, o que fez os neurônios morrerem por ativações nessa região. Leaky ReLU ajuda a resolver este problema. Em vez de definir a função Relu como 0 para x inferior a 0, definimos como um pequeno componente linear de x. Pode ser definido como:
+
+f(x) = ax, x < 0f(x) = x, x > = 0
+
+O que fizemos aqui é que simplesmente substituímos a linha horizontal por uma linha não-zero, não horizontal. Aqui um é um valor pequeno como 0,01 ou algo parecido. A principal vantagem de substituir a linha horizontal é remover o gradiente zero.
+
+
+	Qual função de ativação escolher?
+
+- Funções Sigmóide e suas combinações geralmente funcionam melhor no caso de classificadores.
+- Funções Sigmóide e Tanh às vezes são evitadas devido ao problema de Vanishing Gradient (que estudaremos no capítulo sobre redes neurais recorrentes).
+- A função ReLU é uma função de ativação geral e é usada na maioria dos casos atualmente.
+- Se encontrarmos um caso de neurônios deficientes em nossas redes, a função Leaky ReLU é a melhor escolha.
+- Tenha sempre em mente que a função ReLU deve ser usada apenas nas camadas ocultas.
+- Como regra geral, você pode começar usando a função ReLU e depois passar para outras funções de ativação no caso da ReLU não fornecer resultados ótimos.
