@@ -39,7 +39,34 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     - [NumPy](#numpy)
 
 ## Python
+- ### Estruturas
+    - ### Listas
+    - ### Dicionários
+    - ### Tuplas
+- ### Built-in Functions
+- ### Funções lambda
+- ### List Comprehension
 - ### Pandas
+    - Possui duas classes principais: Series (unidimensional) e DataFrame (pluridimensional).
     
+    - Criando um DataFrame de uma dimensão:
+        dataframe = pd.DataFrame([1,2,3,4])
+        
+    - Criando um DataFrame de mais de uma dimensão:
+        dataframe = pd.DataFrame({"Coluna 1": [1,2,3],
+                          "Coluna 2": [4,5,6]},
+                        index=[1,2,3])
+                        
+    - Atributos do DataFrame:
+        [] dataframe.index: retorna o valor de início e de fim do dataframe, assim como o step.
+        [] dataframe.columns: retorna o nome das colunas do dataframe.
+        [] dataframe.values: retorna todas as linhas presentes no dataframe.
+        [] dataframe.dtype: retorna o tipo de objeto que cada coluna do dataframe armazena.
+        
+    - Principais métodos do DataFrame:
+        [] dataframe.head(): retorna um resumo com o número de linhas passado como parâmetro (5 por default).
+        [] dataframe.describe(): retorna um resumo estatístico dos dados.
+        
+      
 - ### NumPy
 - ### Web Scraping
