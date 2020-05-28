@@ -6,7 +6,7 @@ Planejamento de estudos, com prazo de validade no final do tempo de graduação.
 
 ## O que é isso?
 
-Este repositório surgiu da necessidade mental de um cronograma bem definido acerca do trajeto a ser percorrido para alcançar o objetivo de ser um engenheiro de software ou. O conteúdo teórico descrito pelo cronograma aborda:
+Este repositório surgiu da necessidade mental de um cronograma bem definido acerca do trajeto a ser percorrido para alcançar o objetivo de ser um engenheiro de software. O conteúdo teórico descrito pelo cronograma aborda:
 
 - Noções sólidas de matemática pura (Cálculo I, II e III), probabilidade e estatística, necessários para o estudo e aplicação de algoritmos de aprendizado de máquina e construção de redes neurais, além do exercício de ciência de dados;
 - Conhecimentos formais em linguagens de programação back-end, como Python, Java e JavaScript (node.js), além de seus principais frameworks e paradigmas.
@@ -42,10 +42,13 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Redes Neurais](#redes-neurais)
 	- [Funções de Ativação](#funções-de-ativação)
 		- [Função de Etapa Binária](#função-de-etapa-binária)
-		- [Sigmóide](#sigmoide)
+		- [Sigmóide](#sigmóide)
 		- [Tanh](#tanh)
 		- [ReLU](#relu)
 		- [Leaky ReLU](#leaky-relu)
+- [Apostilas e Documentações](#apostilas-e-documentações)
+- [Cursos](#cursos)
+- [Links Úteis](#links-úteis)
 
 ## Python
 - ### Estruturas
@@ -180,3 +183,21 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
   		- A função Leaky ReLU não passa de uma versão melhorada da função ReLU. Na função ReLU, o gradiente é 0 para x < 0, o que fez os neurônios morrerem por ativações nessa região. Leaky ReLU ajuda a resolver este problema. Em vez de definir a função Relu como 0 para x inferior a 0, definimos como um pequeno componente linear de x. Pode ser definido como:
 
 					f(x) = ax, x < 0f(x) = x, x > = 0
+
+## Apostilas e Documentações
+- [Apostila de HTML (en-us)](https://www.w3schools.com/html/)!
+- [Lista de pacotes e arquivos de classe LaTeX](https://pt.overleaf.com/learn/latex/List_of_packages_and_class_files)!
+
+## Cursos
+- [Curso de Data Science com Python](https://www.datascienceacademy.com.br/path-player?courseid=python-fundamentos&unit=56fa01d947d7ddf1938b456cUnit)!
+- [Curso de Flutter e Dart](https://www.youtube.com/playlist?list=PL5EmR7zuTn_aX0pG4oWTyKKQT25Hkq2XG)
+- [Curso de JavaScript](https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
+- [Curso de Kotlin](https://www.youtube.com/playlist?list=PLxWMYNrPoLoJ6RjjUdpIPm6NE5CiRPG6E)!
+- [Curso de PHP](https://www.youtube.com/playlist?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k)!
+- [Curso de RPG Maker MV](https://www.youtube.com/playlist?list=PLfpzoTMgIjznBx77qsr05Re4-UclPC7kS)!
+- [Curso de Ruby e Ruby on Rails](https://jornadadodev.com.br/posts/ruby)!
+- [Curso de Unity Engine](https://www.youtube.com/playlist?list=PLOFacakspTDKh8wMqF-2soctnLr7i_NEc)!
+
+## Links Úteis
+- [Sons de chuva](https://www.youtube.com/watch?v=8plwv25NYRo)!
+- [Minha playlist de OSTs de Naruto para fins motivacionais](https://www.youtube.com/playlist?list=PL5cKPIIsKxtPHiEpvvWM0A4O6agfqK4cq)!
