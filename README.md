@@ -58,14 +58,14 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
                         index=[1,2,3])
                         
     - Atributos do DataFrame:
-        -[] dataframe.index: retorna o valor de início e de fim do dataframe, assim como o step.
-        -[] dataframe.columns: retorna o nome das colunas do dataframe.
-        -[] dataframe.values: retorna todas as linhas presentes no dataframe.
-        -[] dataframe.dtype: retorna o tipo de objeto que cada coluna do dataframe armazena.
+        - [ ] dataframe.index: retorna o valor de início e de fim do dataframe, assim como o step.
+        - [ ] dataframe.columns: retorna o nome das colunas do dataframe.
+        - [ ] dataframe.values: retorna todas as linhas presentes no dataframe.
+        - [ ] dataframe.dtype: retorna o tipo de objeto que cada coluna do dataframe armazena.
         
     - Principais métodos do DataFrame:
-        -[] dataframe.head(): retorna um resumo com o número de linhas passado como parâmetro (5 por default).
-        -[] dataframe.describe(): retorna um resumo estatístico dos dados.
+        - [ ] dataframe.head(): retorna um resumo com o número de linhas passado como parâmetro (5 por default).
+        - [ ] dataframe.describe(): retorna um resumo estatístico dos dados.
         
       
 - ### NumPy
