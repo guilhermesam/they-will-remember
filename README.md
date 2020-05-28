@@ -22,14 +22,24 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - No geral, este repositório contará com um index, que listará todos os conteúdos citados acima, desfragmentando-os em tópicos de estudo menores. Junto com o conteúdo, comumente estarão dispostos links que levam ao lugar de onde eu obtive tal conhecimento do assunto. Ao final, existe uma seção de links úteis, onde estarão dispostos links que apontam para conteúdos miscelâneos, como playlists com músicas para relaxar, artigos sobre assuntos variados, etc.
 
+## Reminders
+
+- Não é necessário, tanto quanto é impossível, aprender perfeitamente todos os conteúdos aqui abordados. Um bom programador não é aquele que sabe tudo, mas sim, aquele que sabe aplicar perfeitamente o suficiente que conhece para resolver um problema.
+- Existem dias em que não sentirá vontade ou motivação para aprender algo e isto é perfeitamente normal. O importante é jamais desistir, pois cada percentual de progresso é, ainda assim, progresso. Nestes dias, tente aprender outras coisas de áreas diferentes de programação, que ajudarão sua mente a variar o que está aprendendo e facilitar possíveis associações.
+- Conhecimento teórico é bom, mas a prática ajuda muito mais no processo de construir bases sólidas sobre o objeto de estudo. Por isso, sempre pratique o que aprendeu.
+- "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+
 ## Índice
 - [O que é isso](#o-que-é-isso)
 - [O plano diário](#o-plano-diário)
 - [Organização](#organização)
+- [Reminders](#reminders)
 - [Python](#python)
     - [Pandas](#pandas)
     - [NumPy](#numpy)
 
 ## Python
 - ### Pandas
+    
 - ### NumPy
+- ### Web Scraping
