@@ -52,3 +52,35 @@ def triangle_quest(length):
         print(str(i) * i)
     else:
         raise ValueError('Value < 0 is not acceptable')
+
+# Like Fibonnacci, but with sum with 3 last elements
+def tribonacci(signature, n):
+    if n > 0:
+        tribonacci_list = signature.copy()
+        a, b, c = signature[0], signature[1], signature[2]
+        while len(tribonacci_list) < n:
+            a = a + b + c
+            tribonacci_list.append(a)
+            b = a + b + c
+            c = a + b + c
+            tribonacci_list.append(b)
+            tribonacci_list.append(c)
+        return tribonacci_list[:n]
+    else:
+        return []     
+  
+def nb_year(p0, percent, aug, p):
+    years = 0
+    while p0 < p:
+        p0 += p0 * (percent / 100) + aug
+        years += 1
+    return years
+
+# returns a number that is the concatenation 
+# of the powers resulting from each of the 
+# numbers that make up the number passed as param
+def square_numbers(number):
+    concat_square = str()
+    for n in str(number):
+        concat_square += str(int(n) ** 2)
+    return int(concat_square)
