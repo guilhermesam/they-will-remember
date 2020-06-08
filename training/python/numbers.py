@@ -5,6 +5,16 @@ def descending_order(number):
     else:
         raise ValueError('Value < 0 is not acceptable')
 
+# Recursively, sum each digit of a number, until this number be <= 9
+def digital_root(n):
+    if n < 10:
+        return n
+    else:
+        aux = 0
+        for num in str(n):
+            aux += int(num)
+        return digital_root(aux)
+   
 # Reed two numbers "first" and "second" and return the sum of their factorials
 def factorial_sum(first, second):
     sum_first = 1
@@ -38,8 +48,63 @@ def fibonnacci(num_param):
             a, b  = b, a + b
         return fibonnacci
     else:
-        raise ValueError('Value < 0 is not acceptable')
+        raise ValueError('Value < 0 is not acceptable')     
+
+# Based on class, verify which instance of student have most money
+class Student:
+    def __init__(self, name, fives, tens, twenties):
+        self.name = name
+        self.fives = fives
+        self.tens = tens
+        self.twenties = twenties
         
+def most_money(students):  
+    def get_money(s):
+        money = s.fives * 5 + s.tens * 10 + s.twenties * 20
+        return money    
+    money = []
+    most_name = 'all'
+    if all(get_money(x) == get_money(students[0]) for x in students) and len(students) > 1:
+        return most_name
+    for s in students:
+        money.append(get_money(s))
+    return students[money.index(max(money))].name
+
+# Sorts an array by moving their zeros to the end
+def move_zeros(array):
+    return [a for a in array if isinstance(a, bool) or a != 0] + [a for a in array if not isinstance(a, bool) and a == 0]
+
+# A Narcissistic Number is a number which is the sum of its own digits, 
+# each raised to the power of the number of digits in a given base. 
+def narcissistic( value ):
+     return sum([int(x) ** len(str(value)) for x in str(value)]) == value        
+        
+# Verify the growing of a city, by passing the range of population and receiving
+# the time in years to reach this number
+def nb_year(p0, percent, aug, p):
+    years = 0
+    while p0 < p:
+        p0 += p0 * (percent / 100) + aug
+        years += 1
+    return years        
+
+# Sorts an array by sorting in ascending order their odd numbers, but the even numbers don't move
+import numpy as np
+def sort_array(array):
+    array = np.array(array)
+    index = np.where(array % 2 != 0)
+    array[index] = np.sort(array[index])
+    return list(array)
+
+# returns a number that is the concatenation 
+# of the powers resulting from each of the 
+# numbers that make up the number passed as param
+def square_numbers(number):
+    concat_square = str()
+    for n in str(number):
+        concat_square += str(int(n) ** 2)
+    return int(concat_square)
+
 # Print a sequence of numbers, at the format:
 # 1
 # 22
@@ -67,20 +132,4 @@ def tribonacci(signature, n):
             tribonacci_list.append(c)
         return tribonacci_list[:n]
     else:
-        return []     
-  
-def nb_year(p0, percent, aug, p):
-    years = 0
-    while p0 < p:
-        p0 += p0 * (percent / 100) + aug
-        years += 1
-    return years
-
-# returns a number that is the concatenation 
-# of the powers resulting from each of the 
-# numbers that make up the number passed as param
-def square_numbers(number):
-    concat_square = str()
-    for n in str(number):
-        concat_square += str(int(n) ** 2)
-    return int(concat_square)
+        return []
