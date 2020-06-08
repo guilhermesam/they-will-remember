@@ -24,19 +24,9 @@ def caesar_cipher(string, shifties):
 
         return encrypted_word
     else:
-        raise ValueError('shifties must be an integer >= 0')
-
-def leds(number): 
-    if number >= 0:
-        numbers_and_leds = {0:6, 1:2, 2:5, 3:5, 4:4, 5:5, 6:6, 7:3, 8:7, 9:6}
-        number = str(number)
-        total = 0
-        for n in number:
-            total += numbers_and_leds[int(n)]
-        return total
-    else:
-        raise ValueError('param must be an integer >= 0')
-        
+        raise ValueError('shifties must be an integer >= 0'
+ 
+# Transform a string from snake_case to camelCase
 def to_camel_case(original_word):
     if original_word == '':
         return ''
@@ -50,3 +40,26 @@ def to_camel_case(original_word):
             word = word.replace(word[0], word[0].lower())
         word = word.replace(' ','')
         return word
+    
+# Returns an list of tuples, which contains each unique letter in the 
+# original_word and the number of times each one appears
+def ordered_count(original_word):
+    unique_elements = []
+    for char in original_word:
+        if char not in unique_elements:
+            unique_elements.append(char)
+    count_elements = [original_word.count(x) for x in unique_elements]
+    return list(zip(unique_elements, count_elements))
+
+# Build the figure of a diamond with *, receiving the max length of the figure as param                         
+def diamond(times):
+    if times <= 0 or times % 2 == 0:
+        return None
+    stars = [x for x in range(1, times+1, 2)] 
+    stars += list(reversed(stars[:-1]))
+    spaces_range = [x for x in range(stars.index(max(stars)), -1, -1)]
+    spaces_range += list(reversed(spaces_range[:-1]))
+    diam = ''
+    for item in range(0, len(stars)):
+        diam += spaces_range[item]* " " + stars[item] * '*' + '\n'
+    return diam
