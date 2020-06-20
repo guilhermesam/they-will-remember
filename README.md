@@ -51,6 +51,26 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Links Úteis](#links-úteis)
 
 ## Python
+- ### Basics
+    - É uma linguagem de alto nível, ou seja, desenvolvida para fácil leitura por parte das pessoas;
+    - É uma linguagem interpretada, ou seja, o código-fonte não é compilado diretamente código de máquina;
+    - É uma linguagem com tipos dinâmicos, ou seja, um mesmo escopo do código pode assumir diferentes tipos de dado;
+    - Possui sintaxe ligeiramente diferente de outras linguagens tradicionais, como Java e C, já que utiliza a identação para marcar blocos de código e requer apenas o nome da variável para sua declaração.
+- ### Funções
+    - Funções em Python são definidas pela palavra chave `def`, seguido do nome da função e do conjunto de parâmetros (opcionais) entre parênteses.
+    
+	<pre><code>
+	def sum_numbers(n1, n2): 
+	    return n1 + n2
+	</code></pre>
+
+    - É possível passar parâmetros default para a função.
+    
+	<pre><code>
+	def sum_numbers(n1, n2): 
+	    return n1 + n2
+	</code></pre>
+
 - ### Estruturas
     - ### Listas
     - ### Dicionários
