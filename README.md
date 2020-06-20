@@ -35,6 +35,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Organização](#organização)
 - [Reminders](#reminders)
 - [Python](#python)
+- [Data Science](#data-science)
     - [Pandas](#pandas)
     - [NumPy](#numpy)
 - [Machine Learning](#machine-learning)
@@ -56,6 +57,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     - É uma linguagem interpretada, ou seja, o código-fonte não é compilado diretamente código de máquina;
     - É uma linguagem com tipos dinâmicos, ou seja, um mesmo escopo do código pode assumir diferentes tipos de dado;
     - Possui sintaxe ligeiramente diferente de outras linguagens tradicionais, como Java e C, já que utiliza a identação para marcar blocos de código e requer apenas o nome da variável para sua declaração.
+    
 - ### Funções
     - Funções em Python são definidas pela palavra chave `def`, seguido do nome da função e do conjunto de parâmetros (opcionais) entre parênteses.
     
@@ -67,17 +69,23 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     - É possível passar parâmetros default para a função.
     
 	<pre><code>
-	def sum_numbers(n1, n2): 
+	# Atribui o valor de n1 e n2 para 0 caso não sejam passados na chamada do método
+	def sum_numbers(n1=0, n2=0): 
 	    return n1 + n2
 	</code></pre>
+
+- ### Funções lambda
 
 - ### Estruturas
     - ### Listas
     - ### Dicionários
     - ### Tuplas
+    
 - ### Built-in Functions
-- ### Funções lambda
+
 - ### List Comprehension
+
+## Data Science
 - ### Pandas
     - Veja a [documentação](https://pandas.pydata.org/docs/)
     
