@@ -67,7 +67,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	</code></pre>
 
     - É possível passar parâmetros default para a função.
-    
+ 	
 	<pre><code>
 	# Atribui o valor de n1 e n2 para 0 caso não sejam passados na chamada do método
 	def sum_numbers(n1=0, n2=0): 
@@ -78,8 +78,10 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - ### Estruturas
     - ### Listas
+    	dd
     - ### Dicionários
     - ### Tuplas
+    		- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
     
 - ### Built-in Functions
 
