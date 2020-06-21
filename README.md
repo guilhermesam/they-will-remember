@@ -76,13 +76,16 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - ### Funções lambda
 
-- ### Estruturas
-    - ### Listas
-    	dd
-    - ### Dicionários
-    - ### Tuplas
-    		- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
+- ### Listas
+    - Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
+    - Métodos de listas:
+        - [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+    	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
     
+- ### Dicionários
+- ### Tuplas
+    - Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
+
 - ### Built-in Functions
 
 - ### List Comprehension
