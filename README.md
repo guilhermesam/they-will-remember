@@ -77,10 +77,15 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Funções lambda
 
 - ### Listas
-    - Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
-    - Métodos de listas:
-        - [ ] list.append(item): adiciona o item passado como parâmetro a lista.
-    	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+	- Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
+	- Os elementos da lista podem ser acessados através de indexação `list[index` ou através de um loop `for`
+    
+		for item in list:
+		    do_something()
+    
+	- Métodos de listas:
+	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
     
 - ### Dicionários
 - ### Tuplas
