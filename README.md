@@ -76,24 +76,48 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - ### Funções lambda
 
+- ### Strings
+	- Em Python, objetos do tipo String são listas de caractere, baseadas em Unicode.
+	
+
 - ### Listas
 	- Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
-	- Os elementos da lista podem ser acessados através de indexação `list[index` ou através de um loop `for`
+	- Os elementos da lista podem ser acessados através de indexação `list[index]` ou através de um loop `for`;
+	
+	<pre><code>
+	for item in list:
+		do_something()
+	</code></pre>
+	
+    	- É possível concatenar duas listas através do operador `+`;
+	- É possível criar uma lista através da multiplicação de uma outra lista;
     
-		for item in list:
-		    do_something()
-    
+	<pre><code>
+	[1] * 3
+	Output: [1,1,1]
+	</code></pre>
+    	
+	- É possível verificar a existência de um elemento dentro de uma lista através da sintaxe ` element in list`, que retorna um valor booleano;
+  	- É possível realizar o fatiamento (slicing) em uma lista, através da sinxate `list[start:end]`;  
 	- Métodos de listas:
-	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
-	- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
     
 - ### Dicionários
+	- Dicionários são estruturas de dados que armazenam uma coleção de elementos ordenados através de chave e valor, declarados por `dict()` ou `{}`;
+	- Métodos de dicionários: 
+		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+		
 - ### Tuplas
-    - Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
+	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
 
 - ### Built-in Functions
 
 - ### List Comprehension
+
+- ### Tratamento de Arquivos CSV
+	- 
 
 ## Data Science
 - ### Pandas
