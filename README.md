@@ -2,7 +2,7 @@
 
 Planejamento de estudos, com prazo de validade no final do tempo de graduação. O que virá após isso, desejo muito saber. Esta ideia foi inspirada no repositório de [@jwashan](https://github.com/jwasham/coding-interview-university)!
 
-![Warriors](https://www.tec.com.pe/wp-content/uploads/2014/09/LoL-Imagine-Dragons-Warrior-2.jpg)
+[Warriors](https://www.tec.com.pe/wp-content/uploads/2014/09/LoL-Imagine-Dragons-Warrior-2.jpg)
 
 ## O que é isso?
 
@@ -106,8 +106,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Dicionários
 	- Dicionários são estruturas de dados que armazenam uma coleção de elementos ordenados através de chave e valor, declarados por `dict()` ou `{}`;
 	- Métodos de dicionários: 
-		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
-		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+	 `list.append(item) : Adiciona o item passado como parâmetro a lista.
 		
 - ### Tuplas
 	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
@@ -123,7 +122,51 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- `callable()`: Retorna True se o objeto é chamável.
 	- `chr()`: Retorna o caractere Unicode correspondente ao caractere passado.
 	- `complex()`: Retorna um número complexo.
-	
+	- `delattr(class, attr)`: Deleta o atributo do objeto passado como parâmetro.
+	- `dict()`: Instancia um dicionário.
+ 	- `dir(object)`: Retorna uma lista com as propriedades e métodos do objeto recebido como parâmetro.
+	- `enumerate(iterable, start)`: Retorna uma lista como objeto enumerável.
+	- `eval(expression)`: Efetua uma operação e retorna o valor resultante desta.
+	- `exec(object)`: Executa o código ou objeto passado como parâmetro.
+	- `filter(function, iterable)`: Retorna os itens de um objeto iterável que satisfaçam a condição que a função passada como parâmetro determina.
+	- `float()`: Retorna a versão float do objeto especificado.
+	- `format(object, pattern)`: Formata o objeto especificado de acordo com determinado padrão.
+	- `getattr(class, attr)`: Retorna o atributo do objeto passado como parâmetro.
+	- `hasattr`: Retorna true se o objeto passado como parâmetro possui o atributo passado como parâmetro.
+	- `hash(object)`: Retorna o valor hash para o objeto especificado.
+	- `help(object)`: Retorna informações acerca da utilização da propriedade ou método passado como parâmetro.
+	- `hex(number)`: Converte um número em um valor hexadecimal.
+	- `id(object)` : Retorna o endereço de memória local do objeto passado como parâmetro.
+	- `input(message)` : Permite que o sistema solicite informações para o usuário.
+	- `int()` : Retorna um inteiro correspondente ao objeto especificado.
+	- `isinstance(object, object)` : Retorna true se o objeto especificado é uma instância do objeto especificado.
+	- `issubclass(object, object)`:  Retorna true se o objeto especificado é uma subclasse do objeto especificado.
+	- `iter()`: Retorna um objeto iterável.
+	- `len(object)` : Retorna o tamanho de um objeto.
+	- `list(object)` : Retorna uma lista a partir do objeto passado como parâmetro ou instancia uma nova.
+	- `map(function, iterable)` : Aplica uma função em cada item de um objeto iterável e devolve um novo objeto.
+	- `max()`: Retorna o maior valor dentro de um iterável.
+	- `memoryview(object)` : Retorna um objeto como ponto de vista da memória a partir de um objeto passado como parâmetro. 
+	- `min()` : Retorna o menor valor dentro de um iterável.
+	- `next(iterable)` : Retorna o próximo item de um objeto iterável, iniciando no índice 0 por padrão.
+	- `object()`: Instancia um novo objeto.
+	- `oct(number)` : Converte um número para um objeto do sistema [octal](https://pt.wikipedia.org/wiki/Sistema_octal).
+	- `open(filepath, method)` : Abre um arquivo de acordo com o método de leitura (w: write, r: read).
+	- `pow(x,y)` : Retorna o valor de x elevado a y.
+	- `print()` : Imprime um objeto na tela.
+	- `range(start, end, step)` : Gera uma sequência de números, iniciando em 0 e incrementando em 1, por padrão.
+	- `reversed(iterable)` : Retorna um iterador, porém revertido.
+	- `round(number, param)` : Retorna um número decimal arredondado, de acordo com o número de casas decimais passado como parâmetro.
+	- `set()` : Retorna um novo objeto setável.
+	- `setattr(class, attr, new_value)` : Altera algum atributo de uma classe com um novo valor.
+	- `sorted(iterable, key, reverse)` : Organiza uma lista a partir de determinado critério. É possível alterar a ordenação da lista passando um valor booleano para a propriedade reverse.
+	- `str()` : Instancia um novo objeto do tipo String.
+	- `sum(iterable)` : Soma todos os itens de um objeto iterável.
+	- `super()` : Retorna um objeto que representa a classe-pai.
+	- `tuple()` : Instancia um novo objeto do tipo tupla.
+	- `type(object)` : Retorna o tipo do objeto especificado.
+	- `vars(object)` : Retorna um dicionário contendo as propriedades de um objeto.
+	- `zip(iterables..)` : Retorna um objeto iterável contendo tuplas, agrupando na mesma tupla os itens com os mesmos índices nos iteráveis originais.
 	
 - ### List Comprehension
 
