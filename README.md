@@ -35,9 +35,19 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Organização](#organização)
 - [Reminders](#reminders)
 - [Python](#python)
+	- [Funções](#funções)
+	- [Funções Lambda](#funções-lambda)
+	- [Strings](#strings)
+	- [Listas](#listas)
+	- [Dicionários](#dicionários)
+	- [Tuplas](#tuplas)
+	- [Funções Built-in](#funções-built-in)
+	- [List Comprehension](#list-comprehension)
+	- [Tratamento de Arquivos](#tratamento-de-arquivos)
+	
 - [Data Science](#data-science)
-    - [Pandas](#pandas)
-    - [NumPy](#numpy)
+	- [Pandas](#pandas)
+	- [NumPy](#numpy)
 - [Machine Learning](#machine-learning)
 - [Deep Learning](#deep-learning)
 	- [Redes Neurais](#redes-neurais)
@@ -84,13 +94,13 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
 	- Os elementos da lista podem ser acessados através de indexação `list[index]` ou através de um loop `for`;
 	
-	<pre><code>
-	for item in list:
-		do_something()
-	</code></pre>
+		<pre><code>
+		for item in list:
+			do_something()
+		</code></pre>
 	
-    	- É possível concatenar duas listas através do operador `+`;
 	- É possível criar uma lista através da multiplicação de uma outra lista;
+    	- É possível concatenar duas listas através do operador `+`;
     
 	<pre><code>
 	[1] * 3
@@ -111,7 +121,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Tuplas
 	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
 
-- ### Built-in Functions
+- ### Funções Built-in
 	- `abs()`: Retorna o valor absoluto do número. Útil para calcular notações científicas, na forma de, por exemplo, `3e3`, resultando em 3000.
 	- `all()`: Retorna True caso todos os itens de um iterável são True, caso contrário, retorna False. A função sem parâmetros retorna True.
 	- `any()`: Retorna True caso qualquer item dentro de um iterável for True, caso contrário, retorna False.
@@ -170,8 +180,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	
 - ### List Comprehension
 
-- ### Tratamento de Arquivos CSV
-	- 
+- ### Tratamento de Arquivos
 
 ## Data Science
 - ### Pandas
