@@ -113,7 +113,18 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
 
 - ### Built-in Functions
-
+	- `abs()`: Retorna o valor absoluto do número. Útil para calcular notações científicas, na forma de, por exemplo, `3e3`, resultando em 3000.
+	- `all()`: Retorna True caso todos os itens de um iterável são True, caso contrário, retorna False. A função sem parâmetros retorna True.
+	- `any()`: Retorna True caso qualquer item dentro de um iterável for True, caso contrário, retorna False.
+	- `ascii()`: Retorna uma versão legível do objeto, transformando caracteres non-ascii em caracteres de escape.
+	- `bin()`: Retorna a versão binária de um número.
+	- `bool()`: Retorna a versão booleana do objeto especificado.
+	- `bytearray(x,encoding,error)`: Retorna um array de bytes.
+	- `callable()`: Retorna True se o objeto é chamável.
+	- `chr()`: Retorna o caractere Unicode correspondente ao caractere passado.
+	- `complex()`: Retorna um número complexo.
+	
+	
 - ### List Comprehension
 
 - ### Tratamento de Arquivos CSV
@@ -126,7 +137,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     - Possui duas classes principais: Series, formada por uma coluna e várias linhas, e DataFrame (conjunto de Series), formado por linhas e colunas.
     
     - Criando uma Series:
-        serie = pd.Series([1,2,3,4])
+        series = pd.Series([1,2,3,4])
     
     - Criando um DataFrame de uma dimensão:
         dataframe = pd.DataFrame([1,2,3,4])
