@@ -34,6 +34,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [O plano diário](#o-plano-diário)
 - [Organização](#organização)
 - [Reminders](#reminders)
+- [Dicionário do Programador](#dicionario-do-programador)
 - [Python](#python)
 	- [Funções](#funções)
 	- [Funções Lambda](#funções-lambda)
@@ -60,6 +61,10 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Apostilas e Documentações](#apostilas-e-documentações)
 - [Cursos](#cursos)
 - [Links Úteis](#links-úteis)
+
+## Dicionário do Programador
+- ### Tópico 1
+- ### Tópico 2
 
 ## Python
 - ### Basics
