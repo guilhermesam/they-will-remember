@@ -187,6 +187,11 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - ### Tratamento de Arquivos
 
+- ### Date and Time
+	- Para utilizar essas funcionalidades, deve-se realizar a importação do módulo `datetime` ou do módulo `time`.
+	- Ao utilizar o método `time()` do módulo time, o retorno será o número de segundos que se passaram desde a Epoch, ou seja, 1 de janeiro de 1970.
+	- Após obter esse número, utilizado em um grande número de sistemas legado, é possível convertê-lo para um padrão "legível", utilizando o método 
+
 ## Data Science
 - ### Pandas
     - Veja a [documentação](https://pandas.pydata.org/docs/)
