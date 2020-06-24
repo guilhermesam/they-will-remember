@@ -190,8 +190,11 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Date and Time
 	- Para utilizar essas funcionalidades, deve-se realizar a importação do módulo `datetime` ou do módulo `time`.
 	- Ao utilizar o método `time()` do módulo time, o retorno será o número de segundos que se passaram desde a Epoch, ou seja, 1 de janeiro de 1970.
-	- Após obter esse número, utilizado em um grande número de sistemas legado, é possível convertê-lo para um padrão "legível", utilizando o método 
-
+	- Após obter esse número, utilizado em um grande número de sistemas legado, é possível convertê-lo para um padrão "legível", passando-o como parâmetro para o método `fromtimestamp()` do módulo `datetime`.
+	- O método `fromtimestamp` retorna um objeto de data com uma série de atributos, sendo eles: dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second.
+	- Com o método `timedelta(days=)`, é possível criar um objeto comparativo de datas.
+	- O método `today()` do módulo `datetime` retorna o ano, mês e dia atuais, no momento da execução do código.
+	
 ## Data Science
 - ### Pandas
     - Veja a [documentação](https://pandas.pydata.org/docs/)
