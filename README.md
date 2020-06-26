@@ -132,13 +132,13 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	</code></pre>
 	
 	- É possível criar uma lista através da multiplicação de uma outra lista;
-    	- É possível concatenar duas listas através do operador `+`;
     
 	<pre><code>
 	[1] * 3
 	Output: [1,1,1]
 	</code></pre>
     	
+	- É possível concatenar duas listas através do operador `+`;
 	- É possível verificar a existência de um elemento dentro de uma lista através da sintaxe ` element in list`, que retorna um valor booleano;
   	- É possível realizar o fatiamento (slicing) em uma lista, através da sinxate `list[start:end]`;  
 	- Métodos de listas:
