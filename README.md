@@ -234,6 +234,25 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- `dataframe[dataframe['columns'] #condição lógica] ` : retorna os dados seguindo alguma condição lógica.
       
 - ### NumPy
+	- Veja a [documentação](https://numpy.org/doc/stable/)
+	
+	- É utilizado para efetuar cálculos em arrays multidimensionais, sendo empregado em áreas como machine learning, data science, visão computacional, tarefas matemáticas complexas, etc.
+	
+	- Geralmente, o numpy é importado com o allias **np**.
+	
+	- #### Arrays NumPy:
+		- É a estrutura de dados mais importante fornecida pelo numpy, também chamada de ndarray. Consiste em uma tabela de elementos (geralmente números), sendo todos do mesmo tipo, e que são indexados por uma tupla de inteiros positivos. As dimensões são conhecidas como **eixos**, constituindo em uma lista de coordenadas, *e.g.*, `[1,2,1]`, sendo esta lista a posição de um ponto em um espaço tridimensional, como esse eixo tem 3 elementos, diz-se que possui um comprimento de 3. 
+		
+	- #### Métodos e atributos do array:
+		- `np.empty(shape, dtype)` : Cria um array não-inicializado com shape e dtype especificados.
+		- `np.floor` : Retorna uma versão arredondada do parâmetro, podendo ser um array ou apenas um número flutuante.
+		- `np.ones(length)` : Retorna uma matriz quadrada, com tamanho definido, preenchida com uns.
+		- `np.random.random((num_rows, num_columns))` : Retorna uma matriz, com formato especificado, preenchida com número aleatórios.
+		- `array.reshape((new_format))` : Retorna um novo array formatado, baseado no array original. O formato do novo array deve ter relação com o formato do array original, de modo a evitar que existam valores em branco. Por exemplo, se o array original possuía formato (6,0), o novo formato deve abranger todos os valores sem possuir espaços não preenchidos, podendo ser, por exemplo, (3,2).
+		- `array.shape` : Retorna as dimensões do array.
+		- `np.zeros(length)` : Retorna uma matriz quadrada, com tamanho definido, preenchida com zeros.
+		- É possível atribuir diretamente um valor ao array, através do seu índice. Por exemplo, em uma matriz 3x3, `matriz[0][0] = 4` irá atribuir 4 para o valor na posição (0,0).
+		
 - ### Web Scraping
 
 ## Machine Learning
