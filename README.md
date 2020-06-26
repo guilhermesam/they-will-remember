@@ -63,9 +63,36 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [Links Úteis](#links-úteis)
 
 ## Dicionário do Programador
-- ### Tópico 1
-- ### Tópico 2
 
+- ### Continuous Integration (CI): 
+	- Processo de automatização de builds e testes de códigos que acontece quando um membro do time realiza um commit.
+	- Considerada uma metodologia de desenvolvimento moderna.
+	- Atua para resolver problemas relacionados a manutenção do projeto.
+	- Contribui diretamente na redução do custo do projeto.
+	- Práticas como o CI são necessárias dentro de grandes projetos, que compreendem um grande número de pessoas trabalhando em uma mesma feature.
+	- É necessário que sejam realizados ao menos um commit por dia, devido ao fato que a atualização e integração devem ser contínuas, evitando que um código muito grande entre em conflito com outro código, dificultando assim a identificação das partes críticas.
+	- Automatização de build: sempre que uma nova versão do sistema for gerada, ela deverá ser feita de forma automatizada e sem interferência externa.
+	- Testes automáticos durante o período de builds são essenciais.
+	- Ferramentas notáveis: Jenkins, TravisCI, GitLabCI, Hudson, CruiseControl, Bamboo.
+
+- ### GraphQL:
+	- Relacionado ao desenvolvimento de APIs.
+	- Significa Graph Query Language (Linguagem de Consulta em Grafos).
+	- Permite que uma API retorne mais ou menos dados, de acordo com a necessidade, performando melhor que modelos de API tradicionais.
+	- Modelo semelhante à estrutura da orientação a objetos.
+	- Frameworks que utilizam MVC: Ruby on Rails, Merb, Spring, Struts, Laravel, CodeIgniter, CakePHP, Symfony, React, Backbone, Angular, Asp.Net MVC, Django, CherryPy.
+
+- ### MVC (Model-View-Controller):
+	- É um padrão de arquitetura de software utilizado em vários tipos de projetos.
+	- Foi desenvolvido em 1979, por Trygve Reenskaug, muito popular atualmente no desenvolvimento web.
+	- Consiste em dividir a aplicação nas três camadas que compõem seu nome, possibilitando separar a interface de usuário das regras de negócio e auxiliando na reutilização de código.
+	- Sua principal desvantagem é a complexidade na compreensão da estrutura de divisão da aplicação em camadas.
+	Model: camada responsável pela manipulação dos dados da aplicação, responsável por questões como acesso a bancos de dados ou consumo de APIs.
+	View: responsável pela interface que será exibida ao usuário, que contém, por exemplo, os arquivos HTML e CSS.
+	Controller: Responsável pela comunicação entre a camada View e o Model, realizando as requisições do usuário na camada Model para obter os dados e utilizar as Views para exibir de volta ao usuário.
+	Router: Elemento responsável por criar as rotas que ligam os endereços.
+	
+	
 ## Python
 - ### Basics
     - É uma linguagem de alto nível, ou seja, desenvolvida para fácil leitura por parte das pessoas;
