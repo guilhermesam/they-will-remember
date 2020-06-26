@@ -214,6 +214,29 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 - ### Tratamento de Arquivos
 
+- ### Orientação a Objetos:
+	- Sintaxe básica:
+		<pre><code>
+		class Dog:
+		    def __init__(self, name, age):
+		        self.name = name
+			self.age = age
+		    def noise(self):
+		    	return "Au Au"
+		</code></pre>
+		
+	- A palavra chave `self` faz referência a uma instância da classe, assim, variando de objeto para objeto.
+	- Os atributos precisam ser passados diretamente através da instanciação de um objeto.
+	- Herança simples: Classes-filha herdam atributos e métodos da classe-pai.
+		<pre><code>
+		class People:
+		    def __init__(self, name, age):
+		        self.name = name
+			self.age = age
+		class Customer(People):
+			pass
+		</code></pre>
+
 - ### Date and Time
 	- Para utilizar essas funcionalidades, deve-se realizar a importação do módulo `datetime` ou do módulo `time`.
 	- Ao utilizar o método `time()` do módulo time, o retorno será o número de segundos que se passaram desde a Epoch, ou seja, 1 de janeiro de 1970.
