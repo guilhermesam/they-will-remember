@@ -253,6 +253,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     
     - Criando uma Series:
         `series = pd.Series([1,2,3,4])`
+	- Para realizar consultas em uma Series, é possível utilizar os atributos `loc[]` e `iloc[]`, que retornam baseado no nome do label e na posição no índice do elemento, respectivamente.
     
     - Criando um DataFrame de uma dimensão:
        `dataframe = pd.DataFrame([1,2,3,4])`
