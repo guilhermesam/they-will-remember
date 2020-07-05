@@ -399,10 +399,27 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- O comando git add se faz necessário não apenas ao adicionar um arquivo novo ao git, mas também para atualizar o arquivo com novas mudanças.
 	- git commit -m "mensagem": realiza o commit da mudança efetuada;
 	- git push: envia as mudanças locais commitadas para o repositório remoto;
-	- git remote add origin <link do repositório remoto>: adiciona um origin para o repositório se não existe nenhum. Isso é útil quando se deseja iniciar um repositório localmente com "git init" e, em seguida, é necessário enviá-lo para um repositório remoto mais tarde.
+	- git remote add origin <link do repositório remoto>: adiciona um origin para o repositório se não existe nenhum. Isso é útil quando se deseja iniciar um repositório localmente com "git init" e, em seguida, é necessário enviá-lo para um repositório remoto mais tarde;
+	- git branch: verifica onde está o HEAD e em qual branch do git;
+	- git diff: verifica a diferença entre a última mudança e as mudanças atuais;
+	- git remote -v: retorna informações do repositório remoto;
 
 - Controle de versões:
 	- git log: retorna uma lista, identificando os commits efetuados através do retorno de um hash, o autor e a data, bem como a branch;
+	- Ao efetuar uma mudança, o git rastreia esta mudança através da identificação dos contêineres dos commits, armazenando apenas as mudanças que foram feitas e tornando possível reverter o código para um estado passado;
+	- Para recuperar uma versão passada, devemos apontar o HEAD (estado atual) para o respectivo commit, dessa maneira: `git checkout <código do commit>`;
+	- Para retornar ao último commit, usa-se `git checkout master`.
+	- Se quisermos descartar as mudanças feitas no arquivo, usa-se `git checkout <nome do arquivo>`.
+	- Se, após adicionarmos as mudanças ao git, quisermos desfazer essas mudanças, podemos usar `git reset HEAD <nome do arquivo>` para desfazê-las;
+	- Para voltar a um commit anterior, excluindo o atual, usa-se `git reset --hard <código do commit>`;
+	
+- Criando branches e merges:
+	- Criar uma branch (ou ramificação) permite que testes e modificações sejam feitas sem interferir na branch principal (master);
+	- Para criar uma nova branch, usa-se `git checkout -b <nome da branch>`;
+	- A branch criada herda todos os commits da branch master;
+	- É importante destacar que, antes de ser feito o merge, se retornarmos a branch master, todas as mudanças feitas nas outras branchs irão "sumir".
+	- Para retornar à branch master, usa-se `git checkout master`.
+	- Para efetuar a junção do branch criado com o branch master, é necessário estar na master. Após isso, usa-se `git merge <nome da branch>` para fazer o merge;
 
 ## Apostilas e Documentações
 - [Apostila de HTML (en-us)](https://www.w3schools.com/html/)
