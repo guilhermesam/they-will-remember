@@ -58,6 +58,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- [Tanh](#tanh)
 		- [ReLU](#relu)
 		- [Leaky ReLU](#leaky-relu)
+- [Git](#git)
 - [Apostilas e Documentações](#apostilas-e-documentações)
 - [Cursos](#cursos)
 - [Links Úteis](#links-úteis)
@@ -389,6 +390,19 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
   		- A função Leaky ReLU não passa de uma versão melhorada da função ReLU. Na função ReLU, o gradiente é 0 para x < 0, o que fez os neurônios morrerem por ativações nessa região. Leaky ReLU ajuda a resolver este problema. Em vez de definir a função Relu como 0 para x inferior a 0, definimos como um pequeno componente linear de x. Pode ser definido como:
 
 					f(x) = ax, x < 0f(x) = x, x > = 0
+					
+## Git
+- Comandos básicos:
+	- git init: inicia um repositório local;
+	- git status: verifica o estado do contâiner de mudanças;
+	- git add: adiciona um arquivo ou diretório ao contâiner;
+		- O comando git add se faz necessário não apenas ao adicionar um arquivo novo ao git, mas também para atualizar o arquivo com novas mudanças.
+	- git commit -m "mensagem": realiza o commit da mudança efetuada;
+	- git push: envia as mudanças locais commitadas para o repositório remoto;
+	- git remote add origin <link do repositório remoto>: adiciona um origin para o repositório se não existe nenhum. Isso é útil quando se deseja iniciar um repositório localmente com "git init" e, em seguida, é necessário enviá-lo para um repositório remoto mais tarde.
+
+- Controle de versões:
+	- git log: retorna uma lista, identificando os commits efetuados através do retorno de um hash, o autor e a data, bem como a branch;
 
 ## Apostilas e Documentações
 - [Apostila de HTML (en-us)](https://www.w3schools.com/html/)
