@@ -47,6 +47,8 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Tratamento de Arquivos](#tratamento-de-arquivos)
 	
 - [Data Science](#data-science)
+	- [Importância do uso de dados](#importância-do-uso-de-dados)
+- [Ferramentas e técnicas de Data Science](#ferramentas-e-técnicas-de-data-science)
 	- [Pandas](#pandas)
 	- [NumPy](#numpy)
 - [Machine Learning](#machine-learning)
@@ -81,7 +83,6 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- Significa Graph Query Language (Linguagem de Consulta em Grafos).
 	- Permite que uma API retorne mais ou menos dados, de acordo com a necessidade, performando melhor que modelos de API tradicionais.
 	- Modelo semelhante à estrutura da orientação a objetos.
-	- Frameworks que utilizam MVC: Ruby on Rails, Merb, Spring, Struts, Laravel, CodeIgniter, CakePHP, Symfony, React, Backbone, Angular, Asp.Net MVC, Django, CherryPy.
 
 - ### MVC (Model-View-Controller):
 	- É um padrão de arquitetura de software utilizado em vários tipos de projetos.
@@ -92,6 +93,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	View: responsável pela interface que será exibida ao usuário, que contém, por exemplo, os arquivos HTML e CSS.
 	Controller: Responsável pela comunicação entre a camada View e o Model, realizando as requisições do usuário na camada Model para obter os dados e utilizar as Views para exibir de volta ao usuário.
 	Router: Elemento responsável por criar as rotas que ligam os endereços.
+	- Frameworks que utilizam MVC: Ruby on Rails, Merb, Spring, Struts, Laravel, CodeIgniter, CakePHP, Symfony, React, Backbone, Angular, Asp.Net MVC, Django, CherryPy.
 	
 	
 ## Python
@@ -247,6 +249,22 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- O método `today()` do módulo `datetime` retorna o ano, mês e dia atuais, no momento da execução do código.
 	
 ## Data Science
+- ### Importância do uso de dados
+	Nos dias atuais, o conceito de Big Data está mais presente do que nunca; cada vez mais um volume imenso de dados é gerado pelos usuários de todos os tipos de plataformas digitais, como Facebook, Twitter, Tinder, Google, YouTube, etc., porém, estes dados por si só não nos dizem nada, se não forem tratados corretamente, não fornecerão nenhum insight e não possuirão valor algum. É importante que o cientista de dados saiba tratar esses dados corretamente, seja limpando-os, verificando se estão consistentes, tratando valores faltantes, etc.; além disso, nem sempre os dados estarão dispostos em uma estrutura bem definida, como tabelas de bancos de dados relacionais ou arquivos do Excel, eles também podem ser arquivos de áudio, vídeo, texto em linguagem natural, etc.
+	
+	O processo de ciência de dados, todavia, vai muito além de tratar esses dados em uma forma "legível" de visualização, seja para obter algum dado ou valor, também envolve fazer as perguntas corretas aos dados, elaborar as hipóteses e as validar. Algumas perguntas bastante válidas nesse processo são: "o que eu quero aprender com esses dados?", "que tipo de problema eu quero solucionar com o processamento desses dados?", "que ações ou decisões serão feitas a partir dos insights obtidos?".
+	
+- ### Principais conceitos de Data Science
+	- Data Science é uma interseção entre três grandes áreas: matemática, tecnologia e negócios, além também de conhecimento especializado;
+	- É o processo de descoberta de padrões ocultos em grandes volumes de dados, sejam eles estruturados ou não. Estes dados são organizados em modelos que são capazes de explicar o passado ou prever o futuro;
+	- **Data Mining**: Processo de analisar padrões ocultos de dados de acordo com diferentes perspectivas para categorizar em informações úteis;
+	- Processos de análise de dados: envolve extração, transformação, limpeza, modelagem e visualização de dados.
+	
+- ### Objetivos específicos de Data Science
+	- Explicar o passado, normalmente associado a técnicas de BI (Business Inteligence) e utilização de dados estruturados, focado em análise exploratória de dados para descoberta de novos padrões usando ferramentas estatísticas e visualização por meio de dashboards;
+	- Prever o futuro, utilizando tećnicas estatísticas tradicionais ou algoritmos de Machine Learning, com o objetivo de extrair insights de dados, sejam eles estruturados ou não, identificando tendências ou fazendo previsões.
+
+## Ferramentas e técnicas de Data Science
 - ### Pandas
 	- Veja a [documentação](https://pandas.pydata.org/docs/)
     
