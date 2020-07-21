@@ -45,6 +45,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Funções Built-in](#funções-built-in)
 	- [List Comprehension](#list-comprehension)
 	- [Tratamento de Arquivos](#tratamento-de-arquivos)
+	- [Orientação a Objetos](#orientação-a-objetos)
 	
 - [Data Science](#data-science)
 	- [Importância do uso de dados](#importância-do-uso-de-dados)
@@ -218,7 +219,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### Tratamento de Arquivos
 
 - ### Orientação a Objetos:
-	- Sintaxe básica:
+	- **Sintaxe básica:**
 		<pre><code>
 		class Dog:
 		    def __init__(self, name, age):
@@ -230,16 +231,120 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		
 	- A palavra chave `self` faz referência a uma instância da classe, assim, variando de objeto para objeto.
 	- Os atributos precisam ser passados diretamente através da instanciação de um objeto.
-	- Herança simples: Classes-filha herdam atributos e métodos da classe-pai.
+	- O método `__init__(self)` representa o método construtor.
 		<pre><code>
 		class People:
-		    def __init__(self, name, age):
-		        self.name = name
-			self.age = age
-		class Customer(People):
-			pass
+			# atributo de classe
+			this_year = 2020
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+			def get_born_year(self):
+				return self.this_year - self.age
 		</code></pre>
-
+	- Após isso, um objeto desta classe pode ser instanciado como: `people = People('Guilherme', 18)`.
+	- É possível, assim como um atributo de classe, criar um método de classe, que será referenciado pela própria classe, e não por uma instância dela, através do decorator `@classmethod`. Ao invés da keyword `self` usa-se, por convenção, a keyword `cls`, que faz referência a própria classe.
+	
+		
+	- **Métodos Estáticos**
+		- Recebe um decorator `@staticmethod`. Não requer uma instância de classe nem a classe em si. Altera algum comportamento interno da classe ou provê utilitários que serão consumidos pela classe, como por exemplo, gerando um código identificador para uma classe Pessoa.
+		- Por mais que não seja possível usar `self` nem `cls` em sua definição, um método estático pode ser invocado tanto como método de classe quanto como método de instância.
+		
+	- **Métodos Getters e Setters**
+		- Métodos que interagem diretamente com atributos de classe.
+		- Getters são definidos através do decorator `@property` e Setters através do decorator `@<nome_do_atributo>.setter`.
+		- Por convenção, usa-se o nome do atributo com underscore (_) no retorno do getter.
+		<pre><code>
+		class People:
+			# atributo de classe
+			this_year = 2020
+			def __init__(self, name, age):
+				self.name = name
+				self.age = age
+			@property
+			def get_name(self):
+				return self._name
+			def get_age(self):
+				return self._age
+			@name.setter
+			def set_name(self, new_name):
+				self._name = new_name
+		</code><</pre>
+		
+	- **Encapsulamento**
+		- Oculta partes do código para proteção contra interferência externa;
+		- Diferentemente de outras linguagens de programação que suportam OO, como Java, C++, PHP, etc., Python não tem uma declaração explícita para encapsulamento, como as keywords `private`, `public`, `protected`. Ao invés disso, usam-se algumas convenções para definir a visibilidade dos métodos e atributos, que utilizam o underscore(_).
+		- Para explicitar que determinado método ou atributo é protegido, usa-se um underscore (_) na frente do nome.
+		- Para explicitar fortemente que determinado método ou atributo é privado, usa-se dois underscore (_) na frente do nome.
+		- Ainda assim, é possível utilizá-lo em qualquer lugar do código, entretanto, não é uma prática recomendada.
+	
+	- **Associação**
+		- Tipo de relacionamento onde uma classe está associada com outra, porém, nenhuma das duas classes tem dependência entre si.
+		<pre><code>
+		class Writer:
+			def __init__(self, name):
+				self.__name = name
+				self.__tool = None
+			@property
+			def get_name(self):
+				return self.__name
+			@property
+			def get_tool(self)
+				return self.__tool
+			@tool.setter
+			def set_tool(self, tool):
+				self.__tool = tool
+		class Pen:
+			def __init__(self, color):
+				self.__color = color
+			@property
+			def get_color(self):
+				return self.__color	
+			def write(self):
+				return 'writing...'
+		writer = Writer('John')
+		pen = Pen('blue')
+		writer.tool = pen
+		writer.tool.write()
+		Output: 'writing...'
+		</code><</pre>
+	
+	- **Agregação**
+		- Tipo de relacionamento onde um objeto possui outros objetos, e ele não depende desses objetos para existir.
+		- Por exemplo, uma Gaveta pode conter Meias, mas a Gaveta não é feita de Meias. Ou seja, mesmo sem Meias a Gaveta ainda existirá.
+		<pre><code>
+		class Cart:
+			def __init__(self):
+				self.products = []
+			def insert_product(self, product):
+				self.products.append(product)
+			def list_products(self):
+				for product in self.products:
+					print(product.name)
+		class Product:
+			def __init__(self, name, value):
+				self.__name = name
+				self.__value = value
+		cart = Cart()
+		p1 = Product('t-shirt', 30)
+		p2 = Product('shoes', 200)
+		cart.insert_product(p1)
+		</code><</pre>
+		
+	- **Composição**
+		- Relação que ocorre quando um objeto é formado por outros objetos. Ou seja, suas partes o compõem, sem elas o objeto não existe.
+		<pre><code>
+		class Customer:
+			def __init__(self, name):
+				self.name = name
+				self.address = []
+			def insert_address(self, city):
+				self.address.append(Address(city))
+		class Address:
+			def __init__(self, city):
+				self.city = city
+		</code><</pre>
+		
 - ### Date and Time
 	- Para utilizar essas funcionalidades, deve-se realizar a importação do módulo `datetime` ou do módulo `time`.
 	- Ao utilizar o método `time()` do módulo time, o retorno será o número de segundos que se passaram desde a Epoch, ou seja, 1 de janeiro de 1970.
