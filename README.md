@@ -34,7 +34,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - [O plano diário](#o-plano-diário)
 - [Organização](#organização)
 - [Reminders](#reminders)
-- [Dicionário do Programador](#dicionario-do-programador)
+- [Dicionário do Programador](#dicionário-do-programador)
 - [Python](#python)
 	- [Funções](#funções)
 	- [Funções Lambda](#funções-lambda)
@@ -264,6 +264,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 			@property
 			def get_name(self):
 				return self._name
+			@property
 			def get_age(self):
 				return self._age
 			@name.setter
