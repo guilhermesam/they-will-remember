@@ -44,8 +44,9 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Tuplas](#tuplas)
 	- [Funções Built-in](#funções-built-in)
 	- [List Comprehension](#list-comprehension)
-	- [Tratamento de Arquivos](#tratamento-de-arquivos)
 	- [Orientação a Objetos](#orientação-a-objetos)
+	- [Date and Time](#date-and-time)
+	- [Boas práticas](#boas-práticas)
 	
 - [Data Science](#data-science)
 	- [Importância do uso de dados](#importância-do-uso-de-dados)
@@ -353,7 +354,45 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- O método `fromtimestamp` retorna um objeto de data com uma série de atributos, sendo eles: dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second.
 	- Com o método `timedelta(days=)`, é possível criar um objeto comparativo de datas.
 	- O método `today()` do módulo `datetime` retorna o ano, mês e dia atuais, no momento da execução do código.
+
+- ### Boas práticas
+	Saber construir código e fazê-lo funcionar perfeitamente não são skills suficientes para ser um bom desenvolvedor; é preciso desenvolver um código dentro dos padrões reconhecidos pela linguagem, para que o processo de manutenção seja facilitado. Em Python, a convenção de escrita de código é chamada [PEP8](https://www.python.org/dev/peps/pep-0008/).
+	- #### Estruturas de Projetos
+		Um código bem estruturado é aquele que é limpo, de fácil compreensão, com a lógica explícita e consisa e bem organizado, com seus arquivos e pastas devidamente organizados. Assim, aos olhos de outros programadores, é fácil compreender o que cada trecho do código faz, o porquê de ele estar ali, como o faz, etc. Uma dica primordial é nomear arquivos com nomes significativos, como por exemplo, multiplicacao.py, para um script que executa multiplicações; se criarmos vários arquivos que executam operações matemáticas, por que não criar uma pasta chamada matematica?
 	
+	- #### Organização de módulos
+		Uma boa prática para definição de módulos é **jamais** misturar nomes de arquivos com namespace (pasta onde se encontra o arquivo), evitando uma redundância na hora de invocar o módulo, do tipo: namespace.namespace_nome. Além de melhorar a visibilidade, o nome da pasta em si ganha maior importância.
+	
+	- #### Organização de pacotes
+		É importante destacar que **módulos** são os arquivos Python únicos (com extensão .py), enquanto seu conjunto recebe o nome de **pacote**. Por definição, toda pasta que contenha o arquivo de inicialização nomeado como `__init__.py` é considerado um pacote, sendo esse arquivo o primeiro a ser iniciado. Uma boa prática é deixar este arquivo em branco dentro do pacote, dessa forma, não haverá nenhum código nele a ser executado ao se fazer uma chamada para qualquer módulo dentro desse pacote.
+		
+	- #### Estrutura de um repositório Git
+		O Python é, atualmente, uma das linguagens mais utilizadas pelos desesnvolvedores ao redor do mundo, por fatores como facilidades no desenvolvimento e bom poder de processamento; porém, muitos apontam o principal motivo como sendo o fato de que Python é uma linguagem de código aberto, ou seja, qualquer desenvolvedor no mundo pode colaborar com o lançamento de novos pacotes e o aperfeiçoamento da linguagem em si, se tornando desnecessário "reinventar a roda". A tecnologia mais popular atualmente para código aberto é o Git, sendo a plataforma mais popular o GitHub.
+		
+		Os repositórios Git são geralmente organizados da seguinte forma:
+		1. Título do projeto
+		2. Descrição do projeto
+		3. Arquivos do projeto
+		4. README.md (leia-me)
+		
+		Essa descrição facilita a compreensão do projeto por parte de qualquer desenvolvedor que deseje colaborar; quanto maior o projeto, mais complexa a compreensão se torna e mais importante é a organização da estrutura.
+	- #### Arquivos
+		**README.md**: é o arquivo principal do projeto, que irá fornecer a qualquer um que esteja visitando o repositório o que está sendo feito, dicas de como utilizar, quais os objetivos, ou seja, as principais informações a respeito do projeto.
+		
+		**LICENSE.md**: é o arquivo que define quais são as licenças para a utilização do código. Por se tratar de código aberto, é importante definir a licença mais liberal possível, para explicitar que qualquer um está autorizado a utilizar seu projeto e eventualmente melhorá-lo.
+		
+		**setup.py**: é o arquivo de instalação do projeto.
+		
+		**requirements.txt**: Eventualmente, enquanto trabalhamos com Python, estaremos também utilizando código escrito por terceiros em pacotes. Assim, com esse arquivo, estamos explicitando quais são os requisitos para utilizar nosso código.
+		
+	- #### Pastas
+		**docs**: Em projetos de médio e grande porte, é importante dispôr de uma documentação robusta, que irá informar ao usuário do projeto acerca do funcionamento do mesmo, ou mesmo servir de guia para auxiliar na manutenção. Nesta pasta, toda documentação será armazenada.
+		
+		**tests**: Um erro de sintaxe é diferente de um erro de semântica, ou seja, um código que roda não é sinônimo de código que funciona. Por isso, o desenvolvedor deve testá-lo, a fim de garantir que a saída produzida é igual a esperada. Nesta pasta, caso existam arquivos de teste automatizado, os mesmos são armazenados.
+		
+		**nome_do_pacote**: É a pasta que contém os módulos propriamente ditos. Um bom exemplo de repositório pode ser visto nesse [link](https://github.com/navdeep-G/samplemod).
+		
+		
 ## Data Science
 - ### Importância do uso de dados
 	Nos dias atuais, o conceito de Big Data está mais presente do que nunca; cada vez mais um volume imenso de dados é gerado pelos usuários de todos os tipos de plataformas digitais, como Facebook, Twitter, Tinder, Google, YouTube, etc., porém, estes dados por si só não nos dizem nada, se não forem tratados corretamente, não fornecerão nenhum insight e não possuirão valor algum. É importante que o cientista de dados saiba tratar esses dados corretamente, seja limpando-os, verificando se estão consistentes, tratando valores faltantes, etc.; além disso, nem sempre os dados estarão dispostos em uma estrutura bem definida, como tabelas de bancos de dados relacionais ou arquivos do Excel, eles também podem ser arquivos de áudio, vídeo, texto em linguagem natural, etc.
