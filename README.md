@@ -119,13 +119,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	def sum_numbers(n1=0, n2=0): 
 	    return n1 + n2
 	</code></pre>
-
-- ### Funções lambda
-
-- ### Strings
-	- Em Python, objetos do tipo String são listas de caractere, baseadas em Unicode.
 	
-
 - ### Listas
 	- Listas são uma sequência mutável de variáveis, denotada por `list()` ou simplesmente `[]`
 	- Os elementos da lista podem ser acessados através de indexação `list[index]` ou através de um loop `for`;
@@ -146,8 +140,17 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- É possível verificar a existência de um elemento dentro de uma lista através da sintaxe ` element in list`, que retorna um valor booleano;
   	- É possível realizar o fatiamento (slicing) em uma lista, através da sinxate `list[start:end]`;  
 	- Métodos de listas:
-		- list.append(item): adiciona o item passado como parâmetro a lista.
-		- list.append(item): adiciona o item passado como parâmetro a lista.
+		- `append(item)`: Adiciona um elemento ao final da lista;
+		- `clear()`: Remove todos os elementos da lista;
+		- `copy()`: Retorna uma cópia da lista;
+		- `count(item)`: Retorna o número de elementos presentes na lista com o valor especificado;
+		- `extend(iter)`: Adiciona os elementos de uma lista (ou outro iterável) para o fim da lista atual;
+		- `index(item)`: Retorna o índice do primeiro elemento encontrado com o valor especificado;
+		- `insert(index, item)`: Adiciona um elemento na posição especificada;
+		- `pop(index)`: Remove o elemento na posição especificada;
+		- `remove(item)`: Remove o primeiro item com o valor especificado;
+		- `reverse()`: Reverte a ordem da lista;
+		- `sort()`: Organiza a lista, alfabeticamente e em ordem crescente;
     
 - ### Dicionários
 	- Dicionários são estruturas de dados que armazenam uma coleção de elementos ordenados através de chave e valor, declarados por `dict()` ou `{}`;
@@ -496,7 +499,15 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- V - fixed chunk of memory for other type ( void )
 		
 		Podemos checar o tipo do dado através do atributo dtype. Além disso, esse atributo também pode ser usado para inicializar um array com um tipo arbitrário de dado, por exemplo: `np.array([1, 2, 3, 4], dtype='S')`, onde o array será criado contendo strings de números. Para os tipos i, u, f, S e U, nós podemos definir o tamanho em bytes, como por exemplo, ` np.array([1, 2, 3, 4], dtype='i4')`, criando um array de inteiros com 4 bytes de tamanho. Se quisermos converter o tipo de dado de um array já existente, podemos utilizar o método `astype(type)`, especificando o novo tipo de dado. 
-		 
+		
+	- #### Cópia vs View
+		É importante definirmos a diferença entre cópia e view, pois, em determinados casos, a sua utilização influencia em termos de processamento. A cópia é, como o nome sugere, uma cópia do array original, ou seja, as mudanças que a cópia sofre não interferem no array original. Uma cópia pode ser definida através da atribuição, ou seja, `array2 = array_original`, ou então através do método copy `array2 = array_original.copy()`. Já uma view altera o array original, utilizada através de `array.view()`, ou seja, caso este valor seja atribuído a uma variável, e nesta seja feita a mudança, tal mudança irá refletir também no array original.
+		
+	- #### Reshape
+		É uma característica do array que permite sua mutabilidade, ou seja, alterar o número de dimensões. Por exemplo, se temos um array 1-D que compreende todos os números de 1 até 12, é possível transformá-lo em um array 2-D de formato (4,3), ou seja, com 4 linhas e 3 colunas. É importante que a tupla passada como argumento para a função `reshape()` seja compatível com o tamanho do array original. Por exemplo, para transformar um array 1-D em um 2-D, o produto do formato do array 2-D deve ser igual ao tamanho do array 1-D original, caso contrário, o numpy lançará uma exception. Da mesma maneira, é possível converter um array n-D em um array 1-D, passando -1 para o método `reshape()`. É importante destacar que esse método gera uma view, ou seja, o array original é afetado.
+		
+	
+ 		
 	- #### Métodos e atributos do array:
 		- `np.empty(shape, dtype)` : Cria um array não-inicializado com shape e dtype especificados.
 		- `np.floor` : Retorna uma versão arredondada do parâmetro, podendo ser um array ou apenas um número flutuante.
