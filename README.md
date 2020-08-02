@@ -506,8 +506,12 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- #### Reshape
 		É uma característica do array que permite sua mutabilidade, ou seja, alterar o número de dimensões. Por exemplo, se temos um array 1-D que compreende todos os números de 1 até 12, é possível transformá-lo em um array 2-D de formato (4,3), ou seja, com 4 linhas e 3 colunas. É importante que a tupla passada como argumento para a função `reshape()` seja compatível com o tamanho do array original. Por exemplo, para transformar um array 1-D em um 2-D, o produto do formato do array 2-D deve ser igual ao tamanho do array 1-D original, caso contrário, o numpy lançará uma exception. Da mesma maneira, é possível converter um array n-D em um array 1-D, passando -1 para o método `reshape()`. É importante destacar que esse método gera uma view, ou seja, o array original é afetado.
 		
-	
- 		
+	- #### Iterando arrays
+		Para iterar uma matriz, podemos utilizar um loop `for`. Em cada for, cada dimensão do array é "desempilhado", por exemplo, em um array 3-D, um simples loop for percorreria cada elemento do array, ou seja, os arrays 2-D. Para chegar até os elementos 0-D, seriam necessários 3 loops for encadeados, cada um "desempilhando" os elementos do seu antecessor. Uma alternativa para percorrer os elementos de mais baixo nível de um array é utilizar o método `np.nditer(your_array)`, que iŕa "desmontar" o array até obter os elementos de primeira ordem. É possível também iterar um array usando a função `np.ndenumerate(your_array)`, bastante similar à função anterior, porém, esta retorna dois valores: cada elemento do array e o índice atribuído.
+		
+	- #### Junção e separação de arrays
+		Para realizar a concatenação de arrays, podemos usar o método `np.concatenate((array1, array2))`, o qual nos devolverá um novo array. Semelhante ao SQL, onde o join é feito baseado em uma chave, podemos realizar um concatenate baseado em um axis (ou eixo). Da mesma forma, podemos partir um array existente em n novos arrays, com a função `np.array_split(array_original, number_of_splits)`. É importante destacar que os arrays resultantes terão o mesmo número de dimensões do array original.
+		
 	- #### Métodos e atributos do array:
 		- `np.empty(shape, dtype)` : Cria um array não-inicializado com shape e dtype especificados.
 		- `np.floor` : Retorna uma versão arredondada do parâmetro, podendo ser um array ou apenas um número flutuante.
@@ -517,6 +521,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- `array.shape` : Retorna as dimensões do array.
 		- `np.zeros(length)` : Retorna uma matriz quadrada, com tamanho definido, preenchida com zeros.
 		- É possível atribuir diretamente um valor ao array, através do seu índice. Por exemplo, em uma matriz 3x3, `matriz[0][0] = 4` irá atribuir 4 para o valor na posição (0,0).
+		- `np.where(array == value)`: Retorna um array contendo os índices de todas as ocorrências de um valor no array. O array passado como parâmetro representa cada item presente, portanto, é possível descrever expressões booleanas, tais como `array % 2 == 0`, para obter a localização no array de todos os números pares;
 		
 - ### Web Scraping
 
