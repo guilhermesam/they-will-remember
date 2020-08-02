@@ -43,7 +43,6 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Dicionários](#dicionários)
 	- [Tuplas](#tuplas)
 	- [Funções Built-in](#funções-built-in)
-	- [List Comprehension](#list-comprehension)
 	- [Orientação a Objetos](#orientação-a-objetos)
 	- [Date and Time](#date-and-time)
 	- [Boas práticas](#boas-práticas)
@@ -147,8 +146,8 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- É possível verificar a existência de um elemento dentro de uma lista através da sintaxe ` element in list`, que retorna um valor booleano;
   	- É possível realizar o fatiamento (slicing) em uma lista, através da sinxate `list[start:end]`;  
 	- Métodos de listas:
-		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
-		- [ ] list.append(item): adiciona o item passado como parâmetro a lista.
+		- list.append(item): adiciona o item passado como parâmetro a lista.
+		- list.append(item): adiciona o item passado como parâmetro a lista.
     
 - ### Dicionários
 	- Dicionários são estruturas de dados que armazenam uma coleção de elementos ordenados através de chave e valor, declarados por `dict()` ou `{}`;
@@ -214,10 +213,6 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- `type(object)` : Retorna o tipo do objeto especificado.
 	- `vars(object)` : Retorna um dicionário contendo as propriedades de um objeto.
 	- `zip(iterables..)` : Retorna um objeto iterável contendo tuplas, agrupando na mesma tupla os itens com os mesmos índices nos iteráveis originais.
-	
-- ### List Comprehension
-
-- ### Tratamento de Arquivos
 
 - ### Orientação a Objetos:
 	- **Sintaxe básica:**
