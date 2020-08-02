@@ -151,11 +151,21 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
     
 - ### Dicionários
 	- Dicionários são estruturas de dados que armazenam uma coleção de elementos ordenados através de chave e valor, declarados por `dict()` ou `{}`;
-	- Métodos de dicionários: 
-	 `list.append(item) : Adiciona o item passado como parâmetro a lista.
+	- Métodos de dicionários:
+		clear(): Remove todos os itens do dicionário;
+		copy(): Retorna uma cópia do dicionário;
+		fromkeys(): Retorna uma cópia do dicionário com as chaves especificadas;
+		get(key): Retorna o valor correspondente à chave especificada;
+		items(): Retorna uma lista contendo uma tupla para cada par chave-valor;
+		keys(): Retorna uma lista contendo as chaves do dicionário;
+		pop(key): Remove o elemento com a chave especificada;
+		popitem(): Remove o último par chave-valor inserido;
+		setdefault(): Retorna o valor da chave especificada. Se a chave não existe: insere a chave com o valor especificado;
+		update(): Atualiza o dicionário com o par chave-valor especificado;
+		values(): Retorna uma lista com todos os valores do dicionário;
 		
 - ### Tuplas
-	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`
+	- Tuplas são uma sequência imutável de variáveis, denotada por `tuple()` ou simplesmente `()`. Possuem os mesmos métodos de listas, porém, seus elementos não podem mudar, ou seja, não é possível executar métodos inerentes à listas, tais como append() ou clear().
 
 - ### Funções Built-in
 	- `abs()`: Retorna o valor absoluto do número. Útil para calcular notações científicas, na forma de, por exemplo, `3e3`, resultando em 3000.
