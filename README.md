@@ -424,14 +424,14 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- Criando um DataFrame de mais de uma dimensão:
         `dataframe = pd.DataFrame({"Coluna 1": [1,2,3], "Coluna 2": [4,5,6]}, index=[1,2,3])`
                         
-	- Atributos do DataFrame:
-		- `dataframe.index` : retorna o valor de início e de fim do dataframe, assim como o step.
-		- ` dataframe.columns` : retorna o nome das colunas do dataframe.
-		- ` dataframe.values` : retorna todas as linhas presentes no dataframe.
-		- ` dataframe.dtypes` : retorna o tipo de objeto que cada coluna do dataframe armazena.
-		- ` dataframe.shape` : quantidade de linhas e colunas do DataFrame.
-        
-	- Principais métodos do DataFrame:
+	#### Atributos do DataFrame:
+	` dataframe.index` : retorna o valor de início e de fim do dataframe, assim como o step.
+	` dataframe.columns` : retorna o nome das colunas do dataframe.
+	` dataframe.values` : retorna todas as linhas presentes no dataframe.
+	` dataframe.dtypes` : retorna o tipo de objeto que cada coluna do dataframe armazena.
+	` dataframe.shape` : quantidade de linhas e colunas do DataFrame.
+
+	#### Principais métodos do DataFrame:
 		- `dataframe.apply()` : aplica um método para cada item do dataframe.
 		- `dataframe.count()` : contagem de dados não-nulos.
 	 	- `dataframe.describe()` : retorna um resumo estatístico dos dados.
@@ -454,14 +454,41 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 - ### NumPy
 	- Veja a [documentação](https://numpy.org/doc/stable/)
 	
+	- NumPy fornece uma estrutura semelhante às listas built-in do Python, porém, são muito mais eficientes computacionalmente, chamadas de array.
+	
 	- É utilizado para efetuar cálculos em arrays multidimensionais, sendo empregado em áreas como machine learning, data science, visão computacional, tarefas matemáticas complexas, etc.
 	
 	- Geralmente, o numpy é importado com o allias **np**.
 	
-	- #### Arrays NumPy:
-		- É a estrutura de dados mais importante fornecida pelo numpy, também chamada de ndarray. Consiste em uma tabela de elementos (geralmente números), sendo todos do mesmo tipo, e que são indexados por uma tupla de inteiros positivos. As dimensões são conhecidas como **eixos**, constituindo em uma lista de coordenadas, *e.g.*, `[1,2,1]`, sendo esta lista a posição de um ponto em um espaço tridimensional, como esse eixo tem 3 elementos, diz-se que possui um comprimento de 3. 
+	#### Arrays NumPy
+		- É a estrutura de dados mais importante fornecida pelo numpy. Consiste em uma tabela de elementos (geralmente números), sendo todos do mesmo tipo, e que são indexados por uma tupla de inteiros positivos. As dimensões são conhecidas como **eixos**, constituindo em uma lista de coordenadas, *e.g.*, `[1,2,1]`, sendo esta lista a posição de um ponto em um espaço tridimensional, como esse eixo tem 3 elementos, diz-se que possui um comprimento de 3. 
 		
-	- #### Métodos e atributos do array:
+	#### Criando um array
+		`array = np.array([1,2,3])`.
+		- Arrays podem ter várias dimensões, podendo representar, por exemplo, uma matriz, através de um array de duas dimensões. É possível definir o número de dimensões de um array através do atributo `ndim`.
+			`array = np.array([1,2,3,4], ndim=5)`
+			`output: array([[[[[1, 2, 3, 4]]]]])`
+			
+	#### Indexação
+		Assim como em listas, é possível acessar um elemento de um array passando diretamente o número do seu índice, por exemplo, `array[0]`. É importante, porém, atentar à indexação quando trabalhando com arrays de mais de uma dimensão, pois uma indexação simples, da mesma maneira da anterior, iŕa retornar a primeira linha da matriz, e não o primeiro elemento, sendo necessário especificar a coluna desejada também. Caso seja necessário retornar o primeiro elemento da primeira coluna, utiliza-se `array[0][0]` ou `array[0,0]`.
+		
+	#### Slicing com arrays
+		Podemos fragmentar um array atribuindo o início e o fim da partição, da seguinte forma: `new_array = array[0:10]`, ou seja, o array resultante terá todos os elementos do array original partindo do índice 0 e parando no índice 10, dando um step de 1. Podemos alterar o step para, ao invés de pegar todo elemento subsequente, capturar os elementos "pulando" de 2 em 2, por exemplo: `new_array = array[0:10:2]`. Para fazer o slicing em um array de duas dimensões, precisamos especificar qual será a linha pertencente ao array que queremos efetuar o slicing, por exemplo: se temos um array do tipo `np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])`, podemos escrever `arr[1, 1:4]` para obter todos os elementos do índice 1 até o índice 4, percorrendo a segunda linha do array.
+		 
+	#### Tipos de dados
+		- i - integer
+		- b - boolean
+		- u - unsigned integer
+		- f - float
+		- c - complex float
+		- m - timedelta
+		- M - datetime
+		- O - object
+		- S - string
+		- U - unicode string
+		- V - fixed chunk of memory for other type ( void )
+		 
+	#### Métodos e atributos do array:
 		- `np.empty(shape, dtype)` : Cria um array não-inicializado com shape e dtype especificados.
 		- `np.floor` : Retorna uma versão arredondada do parâmetro, podendo ser um array ou apenas um número flutuante.
 		- `np.ones(length)` : Retorna uma matriz quadrada, com tamanho definido, preenchida com uns.
@@ -518,20 +545,20 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 
 
 
-	- ## Função de Etapa Binária
+	- ### Função de Etapa Binária
 		- Funções binárias possuem gradiente da derivada = 0, ou seja, são incapazes de se aperfeiçoar através da correção do erro.
 		- Classificador simples baseado em decisões binárias (sim ou não), seguindo a regra:
 	
 					f(x) = 1, x >= 0
 					f(x) = 0, x < 0
 
-	- ## Função Linear
+	- ### Função Linear
   		- A derivada de uma função linear é constante, ou seja, não depende do valor de entrada x. Por isso, toda vez que efetuamos o backpropagation, o gradiente é o mesmo.
 		- A função linear é definida como:
 			
 					f(x) = ax
 
-	- ## Sigmóide
+	- ### Sigmóide
   		- A maior vantagem desta função linear é justamente o fato de que ela não é linear.
   		- A função essencialmente empurra os valores de Y para os extremos, sendo um atributo interessante quando se deseja classificar os valores dentro de uma classe específica.
   		- A função é problemática quando os valores do gradiente são muito próximos a zero, pois assim, a rede não está realmente aprendendo.
@@ -539,20 +566,20 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		
 					f(x) = 1 / (1 + e ^ -x)
   
- 	- ## Tanh
+ 	- ### Tanh
   		- Basicamente, soluciona o nosso problema dos valores, sendo todos do mesmo sinal. Todas as outras propriedades são as mesmas da função sigmoide. É contínuo e diferenciável em todos os pontos. A função não é linear, então podemos fazer o backpropagation facilmente nos erros.
 		- A função tanh é uma versão escalonada da sigmóide, sendo descrita como:
 			
 					tanh(x) = 2 / (1 + e ^ (- 2x)) -1
 
-	- ## ReLU
+	- ### ReLU
   		- É a função de ativação mais utilizada atualmente na construção de redes neurais.
   		- Uma de suas vantagens é que ela não ativa todos os neurônios da rede simultâneamente, tornando a rede esparsa, eficiente e fácil para a computação.
 		- Significa Unidade Linear Rectificada e pode ser descrita como:
 	
 					f(x) = max (0, x) 
 
-	- ## Leaky ReLU
+	- ### Leaky ReLU
   		- A função Leaky ReLU não passa de uma versão melhorada da função ReLU. Na função ReLU, o gradiente é 0 para x < 0, o que fez os neurônios morrerem por ativações nessa região. Leaky ReLU ajuda a resolver este problema. Em vez de definir a função Relu como 0 para x inferior a 0, definimos como um pequeno componente linear de x. Pode ser definido como:
 
 					f(x) = ax, x < 0f(x) = x, x > = 0
