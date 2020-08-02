@@ -460,22 +460,24 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	
 	- Geralmente, o numpy é importado com o allias **np**.
 	
-	#### Arrays NumPy
+	- #### Arrays NumPy
 		- É a estrutura de dados mais importante fornecida pelo numpy. Consiste em uma tabela de elementos (geralmente números), sendo todos do mesmo tipo, e que são indexados por uma tupla de inteiros positivos. As dimensões são conhecidas como **eixos**, constituindo em uma lista de coordenadas, *e.g.*, `[1,2,1]`, sendo esta lista a posição de um ponto em um espaço tridimensional, como esse eixo tem 3 elementos, diz-se que possui um comprimento de 3. 
 		
-	#### Criando um array
+	- #### Criando um array
 		`array = np.array([1,2,3])`.
 		- Arrays podem ter várias dimensões, podendo representar, por exemplo, uma matriz, através de um array de duas dimensões. É possível definir o número de dimensões de um array através do atributo `ndim`.
+		
 			`array = np.array([1,2,3,4], ndim=5)`
+			
 			`output: array([[[[[1, 2, 3, 4]]]]])`
 			
-	#### Indexação
+	- #### Indexação
 		Assim como em listas, é possível acessar um elemento de um array passando diretamente o número do seu índice, por exemplo, `array[0]`. É importante, porém, atentar à indexação quando trabalhando com arrays de mais de uma dimensão, pois uma indexação simples, da mesma maneira da anterior, iŕa retornar a primeira linha da matriz, e não o primeiro elemento, sendo necessário especificar a coluna desejada também. Caso seja necessário retornar o primeiro elemento da primeira coluna, utiliza-se `array[0][0]` ou `array[0,0]`.
 		
-	#### Slicing com arrays
+	- #### Slicing com arrays
 		Podemos fragmentar um array atribuindo o início e o fim da partição, da seguinte forma: `new_array = array[0:10]`, ou seja, o array resultante terá todos os elementos do array original partindo do índice 0 e parando no índice 10, dando um step de 1. Podemos alterar o step para, ao invés de pegar todo elemento subsequente, capturar os elementos "pulando" de 2 em 2, por exemplo: `new_array = array[0:10:2]`. Para fazer o slicing em um array de duas dimensões, precisamos especificar qual será a linha pertencente ao array que queremos efetuar o slicing, por exemplo: se temos um array do tipo `np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])`, podemos escrever `arr[1, 1:4]` para obter todos os elementos do índice 1 até o índice 4, percorrendo a segunda linha do array.
 		 
-	#### Tipos de dados
+	- #### Tipos de dados
 		- i - integer
 		- b - boolean
 		- u - unsigned integer
@@ -487,8 +489,10 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- S - string
 		- U - unicode string
 		- V - fixed chunk of memory for other type ( void )
+		
+		Podemos checar o tipo do dado através do atributo dtype. Além disso, esse atributo também pode ser usado para inicializar um array com um tipo arbitrário de dado, por exemplo: `np.array([1, 2, 3, 4], dtype='S')`, onde o array será criado contendo strings de números. Para os tipos i, u, f, S e U, nós podemos definir o tamanho em bytes, como por exemplo, ` np.array([1, 2, 3, 4], dtype='i4')`, criando um array de inteiros com 4 bytes de tamanho. Se quisermos converter o tipo de dado de um array já existente, podemos utilizar o método `astype(type)`, especificando o novo tipo de dado. 
 		 
-	#### Métodos e atributos do array:
+	- #### Métodos e atributos do array:
 		- `np.empty(shape, dtype)` : Cria um array não-inicializado com shape e dtype especificados.
 		- `np.floor` : Retorna uma versão arredondada do parâmetro, podendo ser um array ou apenas um número flutuante.
 		- `np.ones(length)` : Retorna uma matriz quadrada, com tamanho definido, preenchida com uns.
