@@ -432,14 +432,14 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- Criando um DataFrame de mais de uma dimensão:
         `dataframe = pd.DataFrame({"Coluna 1": [1,2,3], "Coluna 2": [4,5,6]}, index=[1,2,3])`
                         
-	#### Atributos do DataFrame:
-	` dataframe.index` : retorna o valor de início e de fim do dataframe, assim como o step.
-	` dataframe.columns` : retorna o nome das colunas do dataframe.
-	` dataframe.values` : retorna todas as linhas presentes no dataframe.
-	` dataframe.dtypes` : retorna o tipo de objeto que cada coluna do dataframe armazena.
-	` dataframe.shape` : quantidade de linhas e colunas do DataFrame.
+	- #### Atributos do DataFrame:
+		- ` dataframe.index` : retorna o valor de início e de fim do dataframe, assim como o step.
+		- ` dataframe.columns` : retorna o nome das colunas do dataframe.
+		- ` dataframe.values` : retorna todas as linhas presentes no dataframe.
+		- ` dataframe.dtypes` : retorna o tipo de objeto que cada coluna do dataframe armazena.
+		- ` dataframe.shape` : quantidade de linhas e colunas do DataFrame.
 
-	#### Principais métodos do DataFrame:
+	- #### Principais métodos do DataFrame:
 		- `dataframe.apply()` : aplica um método para cada item do dataframe.
 		- `dataframe.count()` : contagem de dados não-nulos.
 	 	- `dataframe.describe()` : retorna um resumo estatístico dos dados.
@@ -455,7 +455,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		- `dataframe.sort_values(ascending=False)` : ordenando em ordem decrescente.
 		- `dataframe[dataframe['columns'] #condição lógica] ` : retorna os dados seguindo alguma condição lógica.
       	
-	- Como tornar o código "pandorable"?
+	- #### Como tornar o código "pandorable"?
 		- É uma prática ruim utilizar encadeamento de indexação, como df.loc["Washtenaw"]["Total Population"], porque o pandas irá trazer uma cópia de uma view do DataFrame, ocupando mais memória do que deveria;
 		- Ao contrário do encadeamento de indexação, é uma boa prática aplicar encadeamento de métodos, possibilitando condensar várias operações em um DataFrame em uma única sentença;
       
