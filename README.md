@@ -46,6 +46,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Orientação a Objetos](#orientação-a-objetos)
 	- [Date and Time](#date-and-time)
 	- [Boas práticas](#boas-práticas)
+- [Java](#java)
 	
 - [Data Science](#data-science)
 	- [Importância do uso de dados](#importância-do-uso-de-dados)
@@ -398,8 +399,135 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		**tests**: Um erro de sintaxe é diferente de um erro de semântica, ou seja, um código que roda não é sinônimo de código que funciona. Por isso, o desenvolvedor deve testá-lo, a fim de garantir que a saída produzida é igual a esperada. Nesta pasta, caso existam arquivos de teste automatizado, os mesmos são armazenados.
 		
 		**nome_do_pacote**: É a pasta que contém os módulos propriamente ditos. Um bom exemplo de repositório pode ser visto nesse [link](https://github.com/navdeep-G/samplemod).
-		
-		
+
+## Java
+- ### Orientação a Objetos
+	**Classes**
+	
+	Tudo em Java é associado com o conceito de objetos e classes. Para definirmos uma classe, utilizamos a palavra reservada `class`.
+	
+	<pre><code>
+	public class Champion {
+		String name = "Pyke";
+
+	public static void main(String[] args) {
+		Champion c = new Champion();
+		System.out.println(c.name);
+		}
+	}
+	</code></pre>
+	
+	As instâncias de objetos são independentes entre si, portanto, é possível criar inúmeras instâncias oriundas de uma mesma classe. 
+	
+	<pre><code>
+	public class Champion {
+		String name = "Pyke";
+
+	public static void main(String[] args) {
+		Champion c1 = new Champion();
+		Champion c2 = new Champion();
+		Champion c3 = new Champion();
+		System.out.println(c.name);
+		}
+	}
+	</code></pre>
+	
+	É possível criar um objeto de uma classe e acessá-la em outra classe. Isso é frequentemente usado para uma melhor organização das classes, por exemplo, quando uma classe possui todos os atributos e métodos, e outra classe é responsável propriamente pelo método main (código a ser executado). 
+	
+	<pre><code>
+	public class MyClass {
+	  int x = 5;
+	}
+	
+	class OtherClass {
+	  public static void main(String[] args) {
+	    MyClass myObj = new MyClass();
+	    System.out.println(myObj.x);
+	  }
+	}
+	</code></pre>
+	
+	**Métodos Construtores**
+	
+	Construtores são métodos especiais de classes responsáveis por inicializar objetos, sendo chamado toda vez que um objeto da classe é instanciado, podendo ser usado para setar atributos pré-definidos ou definidos no momento da instância do objeto. É importante que o método tenha o mesmo nome da classe para o qual está sendo definido.
+	
+	<pre><code>
+	public class People {
+		String name;  
+
+	// Create a class constructor for the MyClass class
+	public People(String name) {
+		this.name = name;
+	}
+
+	public static void main(String[] args) {
+		People p = new People("Pyke");
+		System.out.println(p.name);
+		}
+	}
+	</code></pre>
+	
+	**Modificadores**
+
+	Podemos dividir os modificadores em dois grupos:
+	- **Modificadores de Acesso**: Controla o nível de acesso;
+	
+	Para classes, usa-se `public` ou default.
+	
+	| Modificador | Descrição                                                                                                        	 |
+	|-------------|--------------------------------------------------------------------------------------------------------------------------|
+	| public      |                                       a classe é acessível por qualquer outro lugar                                      |
+	| default     | a classe é acessível por outras classes do mesmo pacote. Usada quando um <br>modificador não é explicitamente declarado  |
+	
+	Para métodos, atributos e construtores, usa-se `public`, `private`, `protected` ou default.
+	
+	| Modificador | Descrição                                                                                                               |
+	|-------------|-------------------------------------------------------------------------------------------------------------------------|
+	| public      |                                      o código é acessível por qualquer outra classe                                     |
+	| protected   |    o código é acessível dentro da classe onde foi escrito e dentro de outras <br>classes pertencentes ao mesmo pacote   |
+	| private     |                                o código só é acessível dentro da classe onde foi escrito                                |
+	| default     | o código é acessível por outras classes do mesmo pacote. Usada quando um <br>modificador não é explicitamente declarado |
+
+	- **Não-modificadores de Acesso**: Não controla o nível de acesso, mas provê outras funcionalidades;
+	
+	Para classes, usa-se `final` ou `abstract`.
+	
+	| Modificador | Descrição                                                                                                                                       |
+	|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+	| final       |                                                a classe não pode ser herdada para outras classes                                                |
+	| abstract    | a classe não pode ser usada para instanciar objetos. Para acessar uma classe <br>abstrata, deve-se utilizá-la como classe-mãe para outra classe |
+	
+	Para métodos e atributos, usa-se um dos seguintes modificadores:
+	
+	| Modificador  | Descrição                                                                                                                                                                                                            |
+	|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+	| final        |                                                                             atributos e métodos não podem ser sobrescritos ou modificados                                                                            |
+	| static       |                                                                                atributos e métodos pertencem a classe, e não ao objeto                                                                               |
+	| abstract     | só pode ser empregado em uma classe abstrata, e apenas em métodos. O<br> método não possui corpo, apenas uma declaração, por exemplo, `abstract void play() {}`.<br>O corpo será provido pela subclasse (herdada de) |
+	| transient    | atributos e métodos são ignorados ao serializar o objeto que os contém                                                                                                                                               |
+	| synchronized | os métodos só podem ser acessados por um thread de cada vez                                                                                                                                                          |
+	| volatile     | o valor de um atributo não é armazenado em cache localmente no segmento e é sempre lido da "memória principal"                                                                                                       |
+	
+	**Encapsulamento**
+	
+	Atributos privados não podem ser acessados ou modificados fora da classe onde foram declarados. Portanto, para obter acesso a eles, usa-se métodos especiais conhecidos como getters e setters. O método `get()` retorna o valor atual do atributo e o método `set()` altera o valor atual do atributo.
+	
+	<pre><code>
+	public class People {
+		private String name; 
+
+		// Getter
+		public String getName() {
+			return name;
+		}
+
+		// Setter
+		public void setName(String newName) {
+			this.name = newName;
+		}
+	}
+	</pre></code>
+	
 ## Data Science
 - ### Importância do uso de dados
 	Nos dias atuais, o conceito de Big Data está mais presente do que nunca; cada vez mais um volume imenso de dados é gerado pelos usuários de todos os tipos de plataformas digitais, como Facebook, Twitter, Tinder, Google, YouTube, etc., porém, estes dados por si só não nos dizem nada, se não forem tratados corretamente, não fornecerão nenhum insight e não possuirão valor algum. É importante que o cientista de dados saiba tratar esses dados corretamente, seja limpando-os, verificando se estão consistentes, tratando valores faltantes, etc.; além disso, nem sempre os dados estarão dispostos em uma estrutura bem definida, como tabelas de bancos de dados relacionais ou arquivos do Excel, eles também podem ser arquivos de áudio, vídeo, texto em linguagem natural, etc.
