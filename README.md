@@ -47,7 +47,7 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 	- [Date and Time](#date-and-time)
 	- [Boas práticas](#boas-práticas)
 - [Java](#java)
-	
+	- [Orientação a Objetos](#orientacao-a-objetos)
 - [Data Science](#data-science)
 	- [Importância do uso de dados](#importância-do-uso-de-dados)
 - [Ferramentas e técnicas de Data Science](#ferramentas-e-técnicas-de-data-science)
@@ -527,6 +527,148 @@ O objetivo é estudar 4 horas diárias, intercalando os objetos de estudo. Além
 		}
 	}
 	</pre></code>
+	
+	**Packages**
+	
+	Um pacote é usado para relacionar classes em diferentes arquivos, com o objetivo de evitar nomes repetidos e melhorar a legibilidade do diretório. Existem dois tipos de pacotes:
+	- Nativos do Java;
+	- Criados pelo desenvolvedor;
+	
+	Os pacotes podem ser totalmente carregados no escopo de uma classe ou então importar apenas uma classe específica.
+	
+	<pre><code>
+	import package.name;     # importa o pacote inteiro 
+	import package.name.Class;     # importa apenas uma classe específica 
+	</code></pre>
+	
+	**Herança**
+	
+	É possível herdar atributos e métodos de uma classe em outra, através do mecanismo de herança. O relacionamento ocorre entre uma superclasse (a que tem propriedade dos atributos e métodos) e subclasse (a que irá reutilizar os atributos e métodos). Para utilizar herança. usa-se a keyword `extends`.
+	
+	<pre><code>
+	class Vehicle {
+	  protected String brand = "Ford"; // Vehicle attribute
+	  public void honk() { // Vehicle method
+	    System.out.println("Tuut, tuut!");
+	  }
+	}
+
+	class Car extends Vehicle {
+	  private String modelName = "Mustang";    // Car attribute
+	  public static void main(String[] args) {
+
+	  // Cria um objeto carro
+	  Car myCar = new Car();
+
+	  // chamada do método honk() (da classe Vehicle) no objeto myCar
+	  myCar.honk();
+
+	  // Mostra o atributo brand (da classe Vehicle) e o valor de modelName da classe Carro
+	  System.out.println(myCar.brand + " " + myCar.modelName);
+	  }
+	}
+	</code></pre>
+	
+	- É importante destacar o uso dos modificadores de acesso. Caso um método ou atributo for `private`, a subclasse não conseguirá acessá-lo.
+	- Através da utilização da keyword `final`, uma classe não poderá ser herdada.
+	
+	**Polimorfismo**
+	- É uma "propriedade" da herança. Permite que um método se comporte de formas diferentes, de acordo com a classe a qual está atrelado. Por exemplo, em uma classe chamada Animal:
+	
+	<pre><code>
+	class Animal {
+	  public void animalSound() {
+	    System.out.println("The animal makes a sound");
+	  }
+	}
+
+	class Pig extends Animal {
+	  public void animalSound() {
+	    System.out.println("The pig says: wee wee");
+	  }
+	}
+
+	class Dog extends Animal {
+	  public void animalSound() {
+	    System.out.println("The dog says: bow wow");
+	  }
+	}
+	</code></pre>
+	
+	O método `animalSound()` reproduz uma ação genérica, pois está atrelado a classe Animal, e não a algum animal específico. Já classes referentes a animais específicos implementam seus próprios `animalSound()`, visto que cada animal produz um som diferente.
+	
+	**Abstração**
+	É o processo de "esconder" certos detalhes e exibir para o usuário apenas o essencial. `Abstract` é um não-modificador de acesso, que pode ser empregado em atributos e classes.
+	- Classes abstratas: Uma classe abstrata não pode ser diretamente instanciada (para acessar seus métodos e atributos, deve-se utilizá-la como superclasse).
+	- Métodos abstratos: Só pode ser utilizado dentro de uma subclasse, e não possui corpo (o corpo é provido dentro do escopo da subclasse).
+	
+	<pre><code>
+	// Classe abstrata
+	abstract class Animal {
+	  public abstract void animalSound();
+	  public void sleep() {
+	    System.out.println("Zzz");
+	  }
+	}
+
+	// Subclasse (herdada de Animal)
+	class Pig extends Animal {
+	  public void animalSound() {
+	    // O corpo do método animalSound() é provido aqui
+	    System.out.println("The pig says: wee wee");
+	  }
+	}
+
+	class MyMainClass {
+	  public static void main(String[] args) {
+	    Pig myPig = new Pig(); 
+	    myPig.animalSound();
+	    myPig.sleep();
+	  }
+	}
+	</code></pre>
+	
+	**Interfaces**
+	
+	Uma interface é uma "classe abstrata" completamente usada para agrupar métodos relacionados com corpos vazios:
+	
+	<pre><code>
+	interface Animal {
+	  public void animalSound(); // Método de interface (não possui corpo)
+	  public void run(); // Método de interface (não possui corpo)
+	}
+	</code></pre>
+	
+	Para uma classe poder implementar os métodos de uma interface, ela precisa (literalmente) implementá-la com a keyword `implements`. O corpo dos métodos será provido pela classe que implementa a interface. A interface funciona como uma espécie de manual de instruções de implementação, ou seja, as classes que implementam determinada interface devem implementar todos os seus métodos.
+	
+	<pre><code>
+	// Interface
+	interface Animal {
+	  public void animalSound(); // Método de interface (não possui corpo)
+	  public void sleep(); // Método de interface (não possui corpo)
+	}
+
+	// Pig "implementa" a interface Animal
+	class Pig implements Animal {
+	  public void animalSound() {
+	    // O corpo do método animalSound() é provido aqui
+	    System.out.println("The pig says: wee wee");
+	  }
+	  public void sleep() {
+	    // O corpo do método sleep() é provido aqui
+	    System.out.println("Zzz");
+	  }
+	}
+
+	class MyMainClass {
+	  public static void main(String[] args) {
+	    Pig myPig = new Pig();  // Cria um objeto da classe Pig
+	    myPig.animalSound();
+	    myPig.sleep();
+	  }
+	}
+	</code></pre>
+
 	
 ## Data Science
 - ### Importância do uso de dados
